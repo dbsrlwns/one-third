@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/login.css">
+  <script src="script/jquery-3.6.0.min.js"></script>
+  <script src="script/login.js"></script>
+  <title>Login</title>
+</head>
+<body>
+  
+  <div id="main_login">
+    <div class="inner">
+      <div class="path">
+        <ul>
+          <li><a href="/index.html">홈</a></li>
+          <li><strong>로그인</strong></li>
+        </ul>
+      </div>
+
+      <div class="titleArea">
+        <h2>로그인</h2>
+      </div>
+
+      <div class="login_tabs">
+        <ul class="tabs_button">
+          <li class="active">회원</li>
+          <li>비회원</li>
+        </ul>
+
+        <div class="tabs_contents">
+          <form action="#" method="get">
+            <div class="member">
+              <input type="text" id="id" name="id" placeholder="아이디" autocomplete="off">
+              <input type="password" id="pw" name="pw" placeholder="비밀번호">
+              <div class="save_id">
+                <label for="save">
+                  <input type="checkbox" id="save">
+                  <span>아이디 저장</span>
+                </label>
+              </div>
+              <a href="#" class="loginBtn">로그인</a>
+              <ul class="find_id">
+                <li><a href="#">아이디찾기</a></li>
+                <li><a href="#">비밀번호찾기</a></li>
+                <li><a href="../join/join.html">회원가입</a></li>
+              </ul>
+              <div class="snsArea">
+                <div class="facebook">
+                  <a href="#">페이스북 로그인</a>
+                </div>
+                <div class="kakao">
+                  <a href="#">카카오계정 로그인</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="non-member">
+              <p>주문자명</p>
+              <input type="text" id="orderName" name="orderName">
+              <p>주문번호</p>
+              <input type="text" id="orderIndex" name="orderIndex" placeholder="하이픈(-) 포함">
+              <p>비회원주문 비밀번호</p>
+              <input type="password" id="orderPw" name="orderPw">
+              <a href="#" class="loginBtn">비회원 주문 조회</a>
+
+              <p>아직 회원이 아니신가요?</p>
+              <p>회원이 되시면 다양한 혜택을 누리실 수 있습니다.</p>
+              <a href="../join/join.html" class="joinBtn">회원가입</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

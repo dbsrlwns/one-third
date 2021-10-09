@@ -1,0 +1,493 @@
+@charset "UTF-8";
+
+/* common */
+* {
+    padding: 0;
+    margin: 0;
+    color: #333;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.inner {
+    width: 1260px;
+    margin: 0 auto;
+}
+input {
+    padding: 0 0 0 4px;
+    height: 24px;
+    vertical-align: middle;
+}
+label {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+select {
+    border: 1px solid #ddd;
+}
+
+/* main_join */
+#main_join {
+    padding: 300px 0;
+}
+.path ul {
+    display: flex;
+    padding: 10px 0;
+    justify-content: flex-end;
+    font-size: 12px;
+}
+.path ul strong {
+    margin-left: 20px;
+    position: relative;
+}
+.path ul strong::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    left: -12px;
+    width: 5px;
+    height: 9px;
+    background: url(../images/ico_path.gif) no-repeat center;
+}
+
+#main_join .join_us h2 {
+    padding: 20px 0 30px;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+}
+.title {
+    margin: 50px 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.title p {
+    font-size: 12px;
+}
+.title p span {
+    position: relative;
+    right: 3px;
+    top: -1px;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: url(../images/ico_required.gif) no-repeat center;
+}
+#join_form #memberType:first-child {
+    border-bottom: 1px solid #ddd;
+}
+#memberType {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ddd;
+}
+#memberType > h5 {
+    width: 160px;
+    padding: 14px;
+    font-weight: normal;
+    font-size: 12px;
+}
+#memberType:nth-child(12) {
+    border-bottom: 1px solid #ddd;
+}
+#memberType:last-child {
+    border-bottom: 1px solid #ddd;
+}
+#memberType > .required::after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    left: 3px;
+    width: 7px;
+    height: 7px;
+    background: url(../images/ico_required.gif) no-repeat center;
+}
+#memberType > div {
+    font-size: 12px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+#memberType > div input {
+    border: 1px solid #ddd;
+}
+#password_answer {
+    width: 300%;
+}
+#password_questions {
+    width: 150%;
+    border: 1px solid #ddd;
+}
+#password_questions option {
+    font-size: 12px;
+}
+.addressArea > div {
+    margin: 7px 0;
+}
+.addressArea > div:first-child {
+    margin-top: 10px;
+}
+.addressArea > div:last-child {
+    margin-bottom: 10px;
+}
+.addressArea > div:first-child a {
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    transform: translateY(2px);
+    padding: 3px;
+    width: 70px;
+    position: relative;
+}
+.addressArea > div:first-child a::after {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    transform: rotate(-45deg);
+}
+.addressArea #address {
+    width: 70px;
+}
+.addressArea #base_address,
+.addressArea #detail_address {
+    width: 300px;
+}
+#general_telephone,
+#cell_telephone {
+    width: 60px;
+}
+input[type="tel"] {
+    width: 60px;
+}
+#birth {
+    width: 60px;
+}
+#month,
+#day {
+    width: 40px;
+}
+#lift {
+    margin-left: 20px;
+}
+#region {
+    width: 200px;
+}
+input[type="radio"] {
+    vertical-align: middle;
+}
+
+/* agreementArea */
+.agreementArea {
+    border: 1px solid #ddd;
+}
+.all_agreement {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.all_agreement input {
+    width: 20px;
+    height: 20px;
+}
+.all_agreement label {
+    font-size: 14px;
+    font-weight: bold;
+}
+.terms {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.privacy {
+    padding: 20px;
+}
+.terms span,
+.privacy span,
+.terms label,
+.privacy label,
+.terms p,
+.terms strong,
+.privacy p,
+.privacy strong {
+    font-size: 12px;
+}
+.frame {
+    width: 100%;
+    height: 150px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px 0;
+    user-select: none;
+}
+.fr-view-mall-agreement {
+    line-height: 24px;
+}
+.fr-view-privacy-required {
+    line-height: 30px;
+}
+.joinBtnArea {
+    text-align: center;
+    margin: 10px 0;
+}
+.join_btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fff !important;
+    transition: 0.3s;
+    background: #222;
+    cursor: pointer;
+}
+.join_btn:hover {
+    background: rgba(34, 34, 34, 0.8);
+}
+
+
+/* 우편번호 레이어팝업 시작 */
+div#zipcodePopup {
+    width: 600px;
+    padding: 0;
+    border: 1px solid #888;
+    margin: 40px 0;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+
+/* 우편번호 zipcodeHeader 시작 */
+
+#zipcodePopup header#zipcodeHeader {
+    display: flex;
+    width: 100%;
+    padding: 11px 16px;
+    background-color: #5e5e5e;
+    justify-content: space-between;
+}
+
+#zipcodePopup #zipcodeHeader h5 {
+    color: #fff;
+    font-size: 14.5px;
+}
+
+#zipcodePopup #zipcodeHeader #layerCloseBtn {
+    cursor: pointer;
+    transform: translateY(-1px);
+}
+
+
+/* 우편번호 zipcodeHeader 끝 */
+
+
+/* 우편번호 zipcodeMain 시작 */
+div#zipcodeMain {
+    margin-bottom: 30px;
+}
+
+/* 멀티탭 시작 */
+#zipcodePopup div#zipcodeMain {
+    padding: 16px;
+}
+#zipcodePopup #zipcodeMain div#zipcodeTabArea {
+    display: flex;
+}
+#zipcodePopup #zipcodeMain div#zipcodeTabArea button {
+    color: #747474;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    flex: 1;
+}
+#zipcodePopup #zipcodeTabArea {
+    display: flex;
+}
+#zipcodePopup #zipcodeTabArea button:first-child {
+    border-right: none !important;
+}
+
+#zipcodePopup #zipcodeTabArea button:last-child {
+    border-left: none !important;
+}
+
+#zipcodePopup #zipcodeTabArea button.tabSelected {
+    color: #000 !important;
+    background-color: #fff;
+    border: 1px solid #000 !important;
+    border-bottom: 1px solid #fff !important;
+}
+
+#zipcodePopup #zipcodeTabArea button:not(.tabSelected) {
+    border-bottom: 1px solid #000 !important;
+}
+
+
+/* 멀티탭 끝 */
+
+div#addressInputArea {
+    display: flex;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+#addressInputArea>div:first-child {
+    font-size: 13px;
+    padding: 30px 18px;
+    background-color: #eee;
+}
+
+#addressInputArea form {
+    padding: 8px;
+}
+
+#addressInputArea form div#addressInput input {
+    width: 374px;
+    font-size: 14px;
+    padding: 7px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+#addressInputArea form div#addressInput button {
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 3px 16px;
+    border: 1px solid #000;
+    background-color: #000;
+    cursor: pointer;
+    transform: translateY(1px);
+}
+
+#addressInputArea form div#addressHint {
+    font-size: 11.5px;
+    padding: 10px 0 2px;
+}
+
+#oldAddr {
+    display: flex;
+}
+
+#addressListArea {
+    width: 100%;
+    height: 370px;
+    border: 1px solid #ccc;
+    /* border-left: 1px solid #fff; */
+    overflow: auto;
+    position: relative;
+}
+
+#addressListArea div#addressList {
+    width: 100%;
+    height: 400px;
+    /* border: 1px solid #000; */
+}
+
+#addressListArea div#addressList span {
+    width: 300px;
+    font-size: 12.5px;
+    text-align: center;
+    /* border: 1px solid #000; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* 구) 우편번호 서브 멀티탭 시작 */
+#zipcodePopup #zipcodeMain div#oldAddr {
+    padding-left: 16px;
+    border-bottom: 1px solid #999;
+    margin: 14px 0 26px 0;
+
+    display: none;
+}
+
+#zipcodePopup #oldAddr button {
+    color: #fff;
+    font-size: 11px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 4px 20px;
+    border: 1px solid #999;    
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;    
+    background-color: #a8afbb;
+    position: relative;
+    top: 1px;
+
+    cursor: pointer;
+}
+
+#zipcodePopup #oldAddr button:first-child {
+    left: 3px;
+}
+
+#zipcodePopup #oldAddr button::after {
+    content: "";
+    width: 3px;
+    height: 3px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    display: inline-block;
+    transform: rotate(45deg) translate(2px, -6px);
+
+}
+#zipcodePopup #oldAddr button.subTabSelected {
+    color: #111;
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+#zipcodePopup #oldAddr button.subTabSelected::after {
+    width: 3px;
+    height: 3px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+/* 구) 우편번호 서브 멀티탭 끝 */
+
+
+/* 우편번호 zipcodeMain 끝 */
+
+
+/* 우편번호 zipcodeFooter 시작 */
+
+div#zipcodePopup footer#zipcodeFooter {
+    width: 100%;
+    text-align: center;
+    padding: 11px 16px;
+    background-color: #e5e5e5;
+}
+
+div#zipcodePopup #zipcodeFooter button {
+    font-size: 11px;
+    padding: 2px 22px;
+    border: 1px solid #ccc;
+    background-color: #fbfbfb;
+    cursor: pointer;
+}
+
+
+/* 우편번호 zipcodeFooter 끝 */
+
+
+/* 우편번호 레이어팝업 끝 */
