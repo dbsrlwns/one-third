@@ -93,7 +93,6 @@ $(function (){
 
 
     // 장바구니 버튼
-    
     $(".cartBtn a").click(function (e){
         e.preventDefault();
         var val = $('#product_option').val();
@@ -125,7 +124,7 @@ $(function (){
     });
 
     // 쇼핑 계속하기 버튼
-    $(".cartPopBtn a:last-child").click(function (e){
+    $(".cartPopBtn a:first-child").click(function (e){
         e.preventDefault();
         $(".cartPopupBG").css({"display":"none"});
     });
@@ -135,4 +134,69 @@ $(function (){
         $(".cartPopupBG").css({"display":"none"});
     });
 
+
+    // 인디케이터 버튼
+    $(".index a").click(function (e){
+        e.preventDefault();
+        $(".index a").removeClass('active');
+        $(this).addClass('active');
+    });
+    $(".first").click(function (e){
+        e.preventDefault();
+        $(".index a").removeClass('active');
+        $(".index li:first-child a").addClass('active');
+    });
+    $(".last").click(function (e){
+        e.preventDefault();
+        $(".index a").removeClass('active');
+        $(".index li:last-child a").addClass('active');
+    });
+    $(".prev, .next").click(function (e){
+        e.preventDefault();
+    });
+
+    // Q&A 비밀글
+    $(".secret").click(function (e){
+        e.preventDefault();
+        alert("비공개 문의내역은 작성자 본인만 확인하실 수 있습니다.");
+    });
+
+    // 스크롤탑 버튼
+    $(".scrollTop").click(function (){
+        $("html, body").animate({scrollTop:0}, 500);
+    });
+
+    // window 스크롤값
+    $(window).scroll(function (){
+        let wScroll = $(this).scrollTop();
+        // console.log(wScroll);
+        if(wScroll >= 300){
+            $(".scrollTop").addClass('active');
+        } else {
+            $(".scrollTop").removeClass('active');
+        }
+    });
+
+    // 리뷰 영역 탭 버튼
+    $(".review_tab li").click(function (){
+        $(".review_tab li").removeClass('active');
+        $(this).addClass('active');
+    });
+
+    // 좋아요 버튼
+    $(".like a").click(function (e){
+        e.preventDefault();
+        $(this).toggleClass('active');
+
+        let attr = $(this).attr("class");
+        let likeNum = $(this).siblings("span").text();
+        likeNum = parseInt(likeNum);
+
+        if(attr == 'active'){
+            likeNum = likeNum + 1;
+        } else {
+            likeNum = likeNum - 1;
+        }
+        $(this).siblings("span").text(likeNum);
+    });
 });

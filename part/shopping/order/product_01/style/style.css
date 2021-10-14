@@ -15,6 +15,9 @@
     width: 1280px;
     margin: 0 auto;
 }
+table caption {
+    display: none;
+}
 
 /* product_detail */
 .product_detail {
@@ -68,9 +71,6 @@
 .infoArea table {
     width: 100%;
     font-size: 17px;
-}
-.infoArea table caption {
-    display: none;
 }
 .infoArea table th {
     width:  150px;
@@ -228,6 +228,366 @@
     right: 35px;
 }
 
+/* prdDetail(상품 디테일) */
+#prdDetail {
+    margin-bottom: 150px;
+}
+.prdMenu {
+    display: flex;
+}
+.prdMenu li {
+    flex: 1;
+    text-align: center;
+}
+.prdMenu li a {
+    display: block;
+    padding: 12px 0;
+    color: #707070;
+    font-size: 13px;
+    font-weight: bold;
+    background: #f2f2f2;
+    border: 1px solid #aaa;
+    border-bottom: 1px solid #000;
+    border-left: none;
+}
+.prdMenu li:first-child a {
+    border-left: 1px solid #aaa;
+}
+.prdMenu li.active a {
+    color: #fff;
+    background: #4a5164;
+}
+.detail_img { text-align: center; margin: 100px 0; }
+
+/* prdReview(상품 리뷰) */
+#prdReview {
+    margin-bottom: 150px;
+}
+.rating {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    margin: 100px 0 0;
+}
+.rating > div {
+    padding: 30px 20px;
+    font-size: 14px;
+}
+.rating h2 { 
+    text-align: center;
+    margin-bottom: 20px;
+    color: #585757;
+}
+.rating .rating_left {
+    flex: 1;
+    border-right: 1px solid #ddd;
+}
+.review_panel {
+    display: flex;
+}
+.grade b {
+    display: block;
+    width: 106px;
+    height: 102px;
+    text-align: center;
+    background: url(../images/bigStar.png) no-repeat center;
+}
+.grade b span {
+    font-size: 40px;
+    line-height: 102px;
+    color: #fff;
+}
+.grade p {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+.rating_box {
+    margin-left: 70px;
+}
+.star_rating {
+    padding: 3px 0;
+}
+.star_rating em {
+    position: relative;
+    top: -3px;
+    display: inline-block;
+    width: 200px;
+    height: 5px;
+    border-radius: 50px;
+    background: #dedede;
+    margin-left: 10px;
+}
+.star_rating em b {
+    position: absolute;
+    display: inline-block;
+    height: 5px;
+    border-radius: 50px;
+    background: #313131;
+}
+.star_rating:nth-child(1) em b { width: 70%; }
+.star_rating:nth-child(2) em b { width: 10%; }
+.star_rating:nth-child(3) em b { width: 5%; }
+.star_rating:nth-child(4) em b { width: 2%; }
+.star_rating:nth-child(5) em b { width: 4%; }
+.star_rating span {
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.rating .rating_right {
+    position: relative;
+    flex: 1;
+}
+.review_slide {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 430px;
+    border: 1px solid #000;
+    overflow: hidden;
+}
+.review_slide .shuttleFrame {
+    display: flex;
+}
+.review_slide .shuttleFrame a {
+    margin-right: 1%;
+}
+.rating_right > a {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.rating_right > a:hover {
+    border: 1px solid #000;
+}
+.rating_right .prev {
+    background: url(../images/prev.png) no-repeat center;
+    left: 7%;
+}
+.rating_right .next {
+    background: url(../images/next.png) no-repeat center;
+    right: 7%;
+}
+.purchase_review h2 {
+    font-size: 14px;
+    margin: 30px 0 20px;
+}
+.purchase_review > div {
+    position: relative;
+}
+.review_tab {
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+.review_tab li {
+    position: relative;
+    top: 1px;
+    border: 1px solid #ddd;
+    padding: 7px 50px;
+    font-size: 14px;
+    color: #838383;
+    background: #f5f5f6;
+    user-select: none;
+    cursor: pointer;
+}
+.review_tab li.active {
+    color: #000;
+    background: #fff;
+    border-bottom: none;
+}
+.review_tab li:last-child {
+    left: -1px;
+}
+#latest { 
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    padding: 5px 5px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 12px;
+}
+.review_item {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
+.review_item .star_rating span {
+    font-size: 11px;
+    margin-left: 10px;
+}
+.review_content {
+    display: flex;
+    align-items: center;
+}
+.review_content .review_message { 
+    flex: 1;
+}
+.review_content .review_text {
+    font-size: 12px;
+    line-height: 20px;
+    margin: 10px 0;
+}
+.review_content .review_img {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.review_content .review_img img {
+    width: 100%;
+    height: 100%;
+}
+.review_content .like {
+    padding: 0 30px;
+    font-size: 14px;
+}
+.review_content .like a:hover::before {
+    content: '';
+    position: absolute;
+    top: 44%;
+    right: 17.5%;
+    width: 10px;
+    height: 10px;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    z-index: 1;
+    transform: rotate(45deg);
+}
+.review_content .like a:hover::after {
+    content: '이 리뷰가 도움이 되었나요?';
+    position: absolute;
+    top: 37%;
+    right: 11%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 11px;
+    color: #4c4c4c;
+    padding: 5px 10px;
+}
+.review_content .like a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url(../images/like.png) no-repeat;
+}
+.review_content .like a.active {
+    background-position: 0 -30px;
+}
+.review_content .like span {
+    position: relative;
+    top: -10px;
+}
+.review_content .user {
+    /* border: 1px solid #000; */
+    padding: 0 30px;
+    font-size: 12px;
+}
+.review_content .user li {
+    margin: 10px 0;
+}
+.review_content .user b { 
+    margin-right: 10px;
+}
+
+
+/* prdInfo(상품 안내) */
+#prdInfo {
+    margin-bottom: 150px;
+}
+#prdInfo .cont:nth-child(2) {
+    margin-top: 50px;
+}
+#prdInfo .cont h3 { 
+    font-size: 12px;
+    font-weight: bold;
+}
+#prdInfo .cont p { 
+    font-size: 12px;
+}
+#prdInfo .cont ul li { 
+    font-size: 12px;
+}
+#prdQnA {
+    margin-bottom: 150px;
+}
+
+/* prdQnA(상품 질문) */
+.QnA_board {
+    margin-top: 50px;
+}
+.QnA_board h3,
+.QnA_board p {
+    text-align: center;
+    font-size: 14px;
+}
+.QnA_board p {  font-size: 12px; margin-bottom: 20px; line-height: 30px;}
+.QnA_tbl {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+.QnA_tbl th {
+    border: 1px solid #ddd;
+    padding: 17px 0;
+}
+.QnA_tbl td {
+    padding: 17px 0;
+    border-bottom: 1px solid #ddd;
+}
+.QnA_tbl td:nth-child(3) { width: 700px; }
+.QnA_tbl td a:hover { text-decoration: underline; }
+.QnA_tbl .secret::before {
+    content: '';
+    position: relative;
+    top: 2px;
+    left: -5px;
+    display: inline-block;
+    width: 12px;
+    height: 14px;
+    background: url(../images/ico_lock.gif) no-repeat center;
+    background-size: cover;
+}
+
+.indicator {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.indicator ul {
+    display: flex;
+}
+.indicator a {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    margin-right: 5px;
+    text-align: center;
+}
+.indicator a:last-child { margin-right: 0; }
+.indicator a.active {
+    font-weight: bold;
+    color: #333;
+    font-size: 13px;
+    text-decoration: underline;
+}
+.indicator .first { background: url(../images/btn_first.gif) no-repeat center; background-size: cover;}
+.indicator .prev { background: url(../images/btn_prev.gif) no-repeat center; background-size: cover;}
+.indicator .next { background: url(../images/btn_next.gif) no-repeat center; background-size: cover;}
+.indicator .last { background: url(../images/btn_last.gif) no-repeat center; background-size: cover;}
 
 /* 장바구니 팝업창 */
 .cartPopupBG {
@@ -283,57 +643,32 @@
     background: #4c4c4c;
     color: #fff;
 }
-
-/* prdDetail(상품 디테일) */
-#prdDetail {
-    margin-bottom: 150px;
+/* scrollTop */
+.scrollTop {
+    position: fixed;
+    right: 20px;
+    bottom: -100px;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background: rgba(34, 34, 34, 0.8);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 100;
 }
-.prdMenu {
-    display: flex;
-}
-.prdMenu li {
-    flex: 1;
-    text-align: center;
-}
-.prdMenu li a {
+.scrollTop::after {
+    content: '';
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
     display: block;
-    padding: 12px 0;
-    color: #707070;
-    font-size: 13px;
-    font-weight: bold;
-    background: #f2f2f2;
-    border: 1px solid #aaa;
-    border-bottom: 1px solid #000;
-    border-left: none;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #fff;
+    border-top: 2px solid #fff;
 }
-.prdMenu li:first-child a {
-    border-left: 1px solid #aaa;
-}
-.prdMenu li.active a {
-    color: #fff;
-    background: #4a5164;
-}
-
-#prdReview {
-    margin-bottom: 150px;
-}
-
-#prdInfo {
-    margin-bottom: 150px;
-}
-#prdInfo .cont:nth-child(2) {
-    margin-top: 50px;
-}
-#prdInfo .cont h3 { 
-    font-size: 12px;
-    font-weight: bold;
-}
-#prdInfo .cont p { 
-    font-size: 12px;
-}
-#prdInfo .cont ul li { 
-    font-size: 12px;
-}
-#prdQnA {
-    margin-bottom: 150px;
+.scrollTop.active {
+    bottom: 20px;
 }
