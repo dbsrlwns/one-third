@@ -132,8 +132,32 @@ $(function (){
     // 장바구니 팝업 닫기 버튼
     $(".PopClose").click(function (){
         $(".cartPopupBG").css({"display":"none"});
+        $(".review_popupBG").css({"display":"none"});
     });
 
+    // 리뷰 이미지 팝업 
+    $(".review_img").click(function (){
+        $(".review_popupBG").css({"display":"block"});
+        let reviewImg = $(this).children("img").attr('src');
+        let reviewAlt = $(this).children("img").attr('alt');
+        let popupImg = $(".mainImg").children("img").attr('src');
+        let popupAlt = $(".mainImg").children("img").attr('alt');
+        let popupTitle = $(".infoArea").children("h2").text();
+        let rating = $(this).parent("div").parent("div").siblings("div").children("span").text();
+        let popText = $(this).siblings("p").text();
+        let write = $(this).parent("div").siblings("div.user").children("ul").children("li:first-child").children("span").text();
+        let date = $(this).parent("div").siblings("div.user").children("ul").children("li:last-child").children("span").text();
+
+        $(".reviewPop_img").children("img").attr('src', reviewImg);
+        $(".reviewPop_img").children("img").attr('alt', reviewAlt);
+        $(".popup_img").children("img").attr('src', popupImg);
+        $(".popup_img").children("img").attr('alt', popupAlt);
+        $(".pop_title").children("p").text(popupTitle);
+        $(".pop_title").children("span").text(rating);
+        $(".pop_title").children("ul").children("li:first-child").text(write);
+        $(".pop_title").children("ul").children("li:last-child").text(date);
+        $(".pop_text").children("p").text(popText);
+    });
 
     // 인디케이터 버튼
     $(".index a").click(function (e){
