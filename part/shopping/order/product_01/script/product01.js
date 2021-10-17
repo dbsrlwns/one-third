@@ -159,6 +159,30 @@ $(function (){
         $(".pop_text").children("p").text(popText);
     });
 
+    // 베스트 리뷰 다음 슬라이드
+    $(".rating_right .next").click(function (){
+        $(".shuttleFrame").stop().animate({
+            "margin-left":"-111px"
+        },
+        1000,
+        function (){
+            $(".shuttleFrame>a:first-child").insertAfter(".shuttleFrame>a:last-child");
+            $(".shuttleFrame").css({
+                "margin-left":"0"
+            });
+        });
+    });
+
+    // 베스트 리뷰 이전 슬라이드
+    $(".rating_right .prev").click(function (){
+        $(".shuttleFrame").stop().css({"margin-left": "-111px"});
+        $(".shuttleFrame>a:last-child").insertBefore(".shuttleFrame>a:first-child");
+        $(".shuttleFrame").animate({
+            "margin-left":"0"
+        },
+        1000);
+    });
+
     // 인디케이터 버튼
     $(".index a").click(function (e){
         e.preventDefault();

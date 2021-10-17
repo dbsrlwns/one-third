@@ -343,15 +343,22 @@ table caption {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 430px;
-    border: 1px solid #000;
+    width: 440px;
+    /* border: 1px solid #000; */
     overflow: hidden;
 }
 .review_slide .shuttleFrame {
     display: flex;
+    width: 915px;
 }
 .review_slide .shuttleFrame a {
-    margin-right: 1%;
+    width: 106px;
+    height: 102px;
+    margin-right: 5px;
+    border: 1px solid #000;
+}
+.review_slide .shuttleFrame img {
+    width: 100%;
 }
 .rating_right > a {
     position: absolute;
