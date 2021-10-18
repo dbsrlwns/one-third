@@ -31,7 +31,8 @@ table caption {
     flex: 1;
 }
 .imgArea .mainImg {
-    width: 550px;
+    width: 510px;
+    height: 508px;
     border: 1px solid #aaa;
 }
 .imgArea .mainImg img {

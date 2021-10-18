@@ -13,6 +13,10 @@ $(function (){
         $(".bigImg").attr('data-zoom-image', src);
     });
 
+    // 상품정보 이름 바꾸기
+    let title = $(".infoArea h2").text();
+    $(".product_title").text(title);
+
     // ----- 가격 계산 --------
     let count = $(".count").val();
     let price = $(".price").text();
