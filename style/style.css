@@ -13,18 +13,47 @@
 .inner {
     width: 1280px;
     margin: 0 auto;
-    border: 1px solid #000;
 }
 
 /* 헤더 영역 */
+#header {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9000;
+}
 #header .inner {
-    padding: 30px 0;
     position: relative;
  }
- .headerTop {
+ #lnb {
+     padding: 10px 0;
+ }
+ #lnbMenu {
+     display: flex;
+     justify-content: flex-end;
+ }
+ #lnbMenu li a {
+    display: inline-block;
+    font-size: 11px;
+    padding: 0 7px;
+ }
+ #lnbMenu li a::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 8px;
+    position: relative;
+    left: 6px;
+    background: #a2a8b6;
+ }
+ #lnbMenu li:last-child a::after {
+    display: none;
+ }
+ .headerArea {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
  }
 .headerLogo {
     height: 100%;
@@ -44,10 +73,10 @@
     width: 40px;
     height: 40px;
     border-radius: 40px;
-    background: #fff;
+    background: rgba(255,255,255,0.1);
     transition: 0.5s;
     cursor: pointer;
-    box-shadow: 0 0 0 1px #000;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
     overflow: hidden;
 }
 .search.active {
@@ -59,7 +88,6 @@
     left: 0;
     width: 40px;
     height: 40px;
-    background-color: #fff;
     border-radius: 40px;
     display: flex;
     justify-content: center;
@@ -71,7 +99,7 @@
     position: absolute;
     width: 13px;
     height: 13px;
-    border: 2px solid #000;
+    border: 2px solid rgba(0,0,0,0.7);
     border-radius: 50%;
     transform: translate(-2px, -2px);
 }
@@ -80,7 +108,7 @@
     position: absolute;
     width: 2px;
     height: 10px;
-    background: #000;
+    background: rgba(0,0,0,0.7);
     transform: translate(6px, 6px) rotate(315deg);
 }
 .search .input {
@@ -101,6 +129,7 @@
     outline: none;
     font-size: 13px;
     padding: 10px 0;
+    background: rgba(255,255,255,0);
 }
 .clear {
     position: absolute;
@@ -114,20 +143,26 @@
     align-items: center;
 }
 .clear::before {
+    display: none;
     content: '';
     position: absolute;
     width: 1px;
     height: 15px;
-    background: #000;
+    background: rgba(0,0,0,0.5);
     transform: rotate(45deg);
 }
 .clear::after {
+    display: none;
     content: '';
     position: absolute;
     width: 1px;
     height: 15px;
-    background: #000;
+    background: rgba(0,0,0,0.5);
     transform: rotate(-45deg);
+}
+.clear.active::before,
+.clear.active::after {
+    display: block;
 }
 
 /* 메인메뉴 */
@@ -137,8 +172,102 @@
 }
 #mainMenu li a {
     display: block;
-    padding: 0 10px;
+    padding: 0 20px;
     font-size: 15px;
-    margin-top: 20px;
-    /* border: 1px solid #000; */
+    margin-top: 30px;
+}
+#mainMenu li a:hover {
+    font-weight: bold;
+}
+
+/* 메인 슬라이드 이미지 */
+#mainSlide {
+    
+}
+#mainSlide .shuttleFrame {
+
+}
+#mainSlide .shuttleFrame a {
+    display: block;
+    position: absolute;
+
+}
+#mainSlide .shuttleFrame img {
+    width: 1903px;
+    height: 859px;
+}
+#mainSlide a:not(:first-child) {
+    display: none;
+}
+
+/* 스테디 셀러 영역 */
+#steady_seller .inner {
+    padding-top: 980px;
+}
+
+
+/* 푸터 영역 */
+#footer {
+    background: #cad1e1;
+    padding-bottom: 30px;
+}
+#footer a:hover {
+    text-decoration: underline;
+}
+#footerLnb {
+    display: flex;
+}
+#footerLnb a {
+    display: inline-block;
+    padding: 0 20px 0 0;
+    margin: 20px 0; 
+    font-size: 12px;
+    color: #2a2f3b;
+}
+#footerLnb li a::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    position: relative;
+    left: 10px;
+    background: #a2a8b6;
+}
+#footerLnb li:last-child a::after {
+    display: none;
+}
+
+.footer_center {
+    display: flex;
+}
+.footer_center .naver { 
+    flex: 2;
+}
+.footer_center > div > .text {
+    font-size: 13px;
+    margin-top: 7px;
+    line-height: 22px;
+    color: #2a2f3b;
+}
+.footer_center > div > .text .bar {
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    margin: 7px 10px 0;
+    background: #c2c2c2;
+}
+.footer_center .service_center { 
+    flex: 1;
+}
+.footer_center .e_finance { 
+    flex: 1;
+}
+#footer .responsibility {
+    font-size: 14px;
+    margin: 30px 0 10px;
+    color: #2a2f3b;
+}
+#footer .copyright {
+    font-size: 11px;
+    color: #2a2f3b;
 }

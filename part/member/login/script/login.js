@@ -1,4 +1,13 @@
 $(function (){
+    // 검색 영역
+    $(".icon").click(function (){
+        $(".search").toggleClass('active');
+        $(".clear").toggleClass('active');
+    });
+    $(".clear").click(function (){
+        $("#mySearch").val("");
+    });
+
     // 로그인 탭 버튼
     $(".tabs_button li").click(function (){
         $(".tabs_button li").removeClass('active');

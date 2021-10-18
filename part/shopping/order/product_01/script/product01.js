@@ -1,4 +1,13 @@
 $(function (){
+    // 검색 영역
+    $(".icon").click(function (){
+        $(".search").toggleClass('active');
+        $(".clear").toggleClass('active');
+    });
+    $(".clear").click(function (){
+        $("#mySearch").val("");
+    });
+    
     // 이미지 줌 효과
     $(".bigImg").elevateZoom({
         zoomWindowWidth:400,
