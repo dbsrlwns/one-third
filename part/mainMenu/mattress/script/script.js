@@ -23,4 +23,11 @@ $(function (){
             $(".scrollTop").removeClass('active');
         }
     });
+
+    // 순서 목록
+    $(".sequence ul li").click(function (e){
+        e.preventDefault();
+        $(".sequence ul li").removeClass('active');
+        $(this).addClass('active');
+    });
 });

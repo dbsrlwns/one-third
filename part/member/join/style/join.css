@@ -663,7 +663,7 @@ div#zipcodePopup #zipcodeFooter button {
 #footer a:hover {
     text-decoration: underline;
 }
-#footerLnb {
+#footerLnb ul {
     display: flex;
 }
 #footerLnb a {
