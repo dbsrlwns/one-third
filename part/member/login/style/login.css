@@ -178,6 +178,7 @@
 }
 #mainMenu li a:hover {
     font-weight: bold;
+    color: #6b90dc;
 }
 
 /* contents */

@@ -178,19 +178,13 @@
 }
 #mainMenu li a:hover {
     font-weight: bold;
+    color: #6b90dc;
 }
 
 /* 메인 슬라이드 이미지 */
-#mainSlide {
-    
-}
-#mainSlide .shuttleFrame {
-
-}
 #mainSlide .shuttleFrame a {
     display: block;
     position: absolute;
-
 }
 #mainSlide .shuttleFrame img {
     width: 1903px;

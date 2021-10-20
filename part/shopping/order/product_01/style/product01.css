@@ -180,6 +180,7 @@ table caption {
 }
 #mainMenu li a:hover {
     font-weight: bold;
+    color: #6b90dc;
 }
 
 /* product_detail */
