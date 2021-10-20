@@ -23,6 +23,7 @@ table caption {
 #header {
     padding-bottom: 30px;
     border-bottom: 1px solid #ddd;
+    background: #cad1e1;
 }
 #header .inner {
     position: relative;

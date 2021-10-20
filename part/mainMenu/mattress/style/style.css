@@ -209,7 +209,7 @@
 }
 
 .sequence {
-    margin: 30px 0;
+    margin: 40px 0;
 }
 .sequence ul {
     display: flex;
@@ -248,9 +248,15 @@
     display: none;
 }
 
+
+.gallery_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 .gallery_area {
-    display: inline-block;
-    margin-right: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 .gallery_area:last-child {
     margin-right: 0;
@@ -260,28 +266,41 @@
     overflow: hidden;
     width: 400px;
     height: 400px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .gallery_area .img {
     width: 400px;
     height: 400px;
+    transition: 0.8s;
+}
+.gallery_area:nth-child(1) .img {
     background: url(../images/gallery.jpg) no-repeat center;
     background-size: cover;
-    transition: 0.8s;
+}
+.gallery_area:nth-child(2) .img {
+    background: url(../images/gallery2.jpg) no-repeat center;
+    background-size: cover;
+}
+.gallery_area:nth-child(3) .img {
+    background: url(../images/gallery3.jpg) no-repeat center;
+    background-size: cover;
 }
 .gallery_area:hover .img {
     transform: scale(1.08);
 }
 .gallery_area .title {
     font-size: 22px;
+    margin: 8px 0;
     font-weight: bold;
+    text-align: center;
 }
 .gallery_area .price {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
-    margin-top: 5px;
+    text-align: center;
 }
 .gallery_area .consumer {
+    font-size: 13px;
     font-weight: normal;
     margin: 0 15px;
     text-decoration: line-through;
@@ -295,7 +314,7 @@
 .page {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 70px;
 }
 .page .number {
     width: 30px;
