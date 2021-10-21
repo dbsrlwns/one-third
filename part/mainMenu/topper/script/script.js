@@ -23,4 +23,42 @@ $(function (){
             $(".scrollTop").removeClass('active');
         }
     });
+
+    // 순서 목록
+    $(".sequence ul li").click(function (e){
+        e.preventDefault();
+        $(".sequence ul li").removeClass('active');
+        $(this).addClass('active');
+    });
+
+    // 갤러리 게시판 배열
+    let array = [
+        ["topper01/topper01.html", "삼분의일 바닥토퍼", 365500, 430000, 15],
+        ["topper02/topper02.html", "삼분의일 침대토퍼", 270000, 300000, 10]
+    ];
+    let res = "";
+    
+    for(let i=0;i<array.length;i++){
+        for(let j=0;j<array[i].length;j++){
+            if(j == 0){
+                res += "<a href='../../shopping/order/" + array[i][j] + "' class='gallery_area'>";
+                res += "<div class='img_area'>";
+                res += "<div class='img'></div>";
+                res += "</div>"
+            } else if(j == 1){
+                res += "<div class='text'>";
+                res += "<p class='title'>" + array[i][j] + "</p>";
+            } else if(j == 2){
+                res += "<p class='price_area'>";
+                res += "<span class='sale'>" + array[i][j] + "</span>";
+            } else if(j == 3){
+                res += "<span class='consumer'>" + array[i][j] + "</span>";
+            } else if(j == 4){
+                res += "<span class='percent'>" + array[i][j] + "</span></p>";
+                res += "</div>";
+            }
+        }
+        res += "</a>";
+    }
+    $(".gallery_list").html(res);
 });

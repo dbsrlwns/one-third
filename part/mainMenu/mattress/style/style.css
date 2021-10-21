@@ -178,6 +178,10 @@
     font-weight: bold;
     color: #6b90dc;
 }
+#mainMenu li:nth-child(2) a {
+    color: #6b90dc;
+    font-weight: bold;
+}
 
 /* 매트리스 영역 */
 #mattress {
@@ -255,8 +259,24 @@
     flex-wrap: wrap;
 }
 .gallery_area {
+    position: relative;
     flex-wrap: wrap;
     margin-bottom: 30px;
+}
+.gallery_area:nth-child(1)::after {
+    content: 'Best';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    display: block;
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 5px;
+    background: #09f;
+    color: #fff;
+    font-size: 11px;
 }
 .gallery_area:last-child {
     margin-right: 0;
@@ -288,16 +308,28 @@
 .gallery_area:hover .img {
     transform: scale(1.08);
 }
+.gallery_area .text {
+    text-align: center;
+}
 .gallery_area .title {
     font-size: 22px;
     margin: 8px 0;
     font-weight: bold;
-    text-align: center;
 }
-.gallery_area .price {
+.gallery_area .title::after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    background: url(https://static-resource-smartstore.pstatic.net/brandstore/p/static/20211014191118/media/icon_heart_15x13_gray.412edbc4.svg) no-repeat center;
+    background-size: contain;
+}
+.gallery_area .sale {
     font-size: 15px;
     font-weight: bold;
-    text-align: center;
 }
 .gallery_area .consumer {
     font-size: 13px;
@@ -310,6 +342,9 @@
     font-weight: bold;
     color: #6b90dc;
 }
+.gallery_area .sale::after,
+.gallery_area .consumer::after { content: '원'; }
+.gallery_area .percent::after { content: '%'; }
 
 .page {
     display: flex;

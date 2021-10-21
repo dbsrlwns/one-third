@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <script src="script/jquery-3.6.0.min.js"></script>
+  <script src="script/jquery.elevateZoom-3.0.8.min.js"></script>
+  <script src="script/script.js"></script>
+  <script src="https://kit.fontawesome.com/b4873e949a.js" crossorigin="anonymous"></script>
+  <title>상품2</title>
+</head>
+<body>
+
+  <header id="header">
+    <div class="inner">
+      <nav id="lnb">
+        <ul id="lnbMenu">
+          <li class="lnbLi"><a href="../../../member/login/login.html">로그인</a></li>
+          <li class="lnbLi"><a href="../../../member/join/join.html">회원가입</a></li>
+          <li class="lnbLi"><a href="../../cart/cart.html">장바구니</a></li>
+          <li class="lnbLi"><a href="#">마이페이지</a></li>
+        </ul>
+      </nav>
+
+      <div class="headerArea">
+        <div class="headerLogo">
+          <a href="../../../../index.html"><img src="images/headerLogo.png" alt="로고 이미지"></a>
+        </div>
+
+        <div class="search">
+          <div class="icon"></div>
+          <div class="input">
+            <input type="text" placeholder="검색어를 입력하세요." id="mySearch">
+          </div>
+          <span class="clear"></span>
+        </div>
+      </div>
+
+      <nav id="gnb">
+        <ul id="mainMenu">
+          <li class="mainLi"><a href="../../../mainMenu/allProducts/allProducts.html">모든 상품</a></li>
+          <li class="mainLi"><a href="../../../mainMenu/mattress/mattress.html">매트리스</a></li>
+          <li class="mainLi"><a href="../../../mainMenu/topper/topper.html">토퍼</a></li>
+          <li class="mainLi"><a href="../../../mainMenu/pillow/pillow.html">베개</a></li>
+          <li class="mainLi"><a href="../../../mainMenu/frame/frame.html">프레임</a></li>
+          <li class="mainLi"><a href="../../../mainMenu/fabric/fabric.html">패브릭</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="product_detail">
+    <div class="inner">
+      <div class="detailArea">
+        <div class="imgArea">
+          <div class="mainImg">
+            <img src="images/main.jpg" alt="메인 이미지" class="bigImg" data-zoom-image="images/main.jpg">
+          </div>
+
+          <div class="subImg">
+            <ul>
+              <li><img src="images/main.jpg" alt="서브 이미지" class="thumbImg"></li>
+              <li><img src="images/main2.jpg" alt="서브 이미지2" class="thumbImg"></li>
+              <li><img src="images/main3.jpg" alt="서브 이미지" class="thumbImg"></li>
+              <li><img src="images/main4.jpg" alt="서브 이미지" class="thumbImg"></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="infoArea">
+          <h2>삼분의일 모던프레임</h2>
+          <table class="info_tbl" summary="기본 정보">
+            <caption>기본 정보</caption>
+            <tbody>
+              <tr>
+                <th scope="row">상품요약정보</th>
+                <td class="product_title"></td>
+              </tr>
+              <tr>
+                <th scope="row">소비자가</th>
+                <td><span class="consumer">1,200,000원</span></td>
+              </tr>
+              <tr>
+                <th scope="row">판매가</th>
+                <td><span class="price">1,080,000</span></td>
+              </tr>
+              <tr>
+                <th scope="row">배송방법</th>
+                <td>택배</td>
+              </tr>
+              <tr>
+                <th scope="row">배송비</th>
+                <td>무료배송</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <table class="select_tbl" summary="선택 옵션">
+            <caption>선택 옵션</caption>
+            <tbody>
+              <tr>
+                <th scope="row">선택</th>
+                <td>
+                  <select name="select01" id="product_option">
+                    <option value="0" selected>- [필수] 옵션을 선택해 주세요 -</option>
+                    <option value="1" disabled>------------------------------------</option>
+                    <option value="2" class="product_title"></option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="helpArea">
+            <p>위 옵션선택 박스를 선택하시면 아래에 상품이 추가됩니다.</p>
+          </div>
+
+          <div class="guideArea">
+            <p>(최소주문수량 1개 이상 / 최대주문수량 20개 이하)</p>
+          </div>
+
+          <table class="option_tbl" summary="선택 목록">
+            <caption>선택 목록</caption>
+            <tbody>
+              <tr>
+                <th scope="row" class="product_title"></th>
+                <td class="value_box">
+                  <input type="text" class="count" value="1">
+                  <a href="#" class="increase">증가</a>
+                  <a href="#" class="decrease">감소</a>
+                </td>
+                <td class="list_price"></td>
+                <td class="list_delete"><img src="images/btn_price_delete.gif" alt="목록삭제"></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="total_box">
+            <strong>총 상품금액</strong>(수량) :
+            <span class="total_price">0</span>
+            (<span class="total_count">0</span>)
+          </div>
+
+          <div class="buttonArea">
+            <div class="purchaseBtn">
+              <a href="../../../member/login/login.html">바로구매</a>
+            </div>
+  
+            <div class="cartBtn">
+              <a href="#">장바구니</a>
+            </div>
+            
+            <div class="interestedBtn">
+              <a href="../../../member/login/login.html">관심상품등록</a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div id="prdDetail">
+    <div class="inner">
+      <ul class="prdMenu">
+        <li class="active"><a href="#prdDetail">상품상세정보</a></li>
+        <li><a href="#prdReview">상품사용후기</a></li>
+        <li><a href="#prdInfo">상품구매안내</a></li>
+        <li><a href="#prdQnA">상품 Q&A</a></li>
+      </ul>
+
+      <div class="detail_img">
+        <img src="images/001.jpg" alt="상품 디테일">
+        <img src="images/002.jpg" alt="상품 디테일">
+        <img src="images/003.jpg" alt="상품 디테일">
+      </div>
+    </div>
+  </div>
+
+  <div id="prdReview">
+    <div class="inner">
+      <ul class="prdMenu">
+        <li><a href="#prdDetail">상품상세정보</a></li>
+        <li class="active"><a href="#prdReview">상품사용후기</a></li>
+        <li><a href="#prdInfo">상품구매안내</a></li>
+        <li><a href="#prdQnA">상품 Q&A</a></li>
+      </ul>
+
+      <div class="rating">
+        <div class="rating_left">
+          <h2>리뷰 평점</h2>
+          <div class="review_panel">
+            <div class="grade">
+              <b>
+                <span>4.5</span>
+              </b>
+              <p>리뷰 평점</p>
+            </div>
+
+            <div class="rating_box">
+              <div class="star_rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <em>
+                  <b></b>
+                </em>
+                <span>118</span>
+              </div>
+
+              <div class="star_rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <em>
+                  <b></b>
+                </em>
+                <span>25</span>
+              </div>
+
+              <div class="star_rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <em>
+                  <b></b>
+                </em>
+                <span>7</span>
+              </div>
+
+              <div class="star_rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <em>
+                  <b></b>
+                </em>
+                <span>3</span>
+              </div>
+
+              <div class="star_rating">
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <em>
+                  <b></b>
+                </em>
+                <span>6</span>
+              </div>
+            </div>
+
+            </div>
+        </div>
+
+        <div class="rating_right">
+          <h2>베스트 평점 리뷰</h2>
+          <div class="review_slide">
+            <div class="shuttleFrame">
+              <a href="#"><img src="images/Ctype.jpg" alt="베스트 이미지"></a>
+              <a href="#"><img src="images/bigStar.png" alt="베스트 이미지"></a>
+              <a href="#"><img src="images/bigStar.png" alt="베스트 이미지"></a>
+              <a href="#"><img src="images/bigStar.png" alt="베스트 이미지"></a>
+              <a href="#"><img src="images/bigStar.png" alt="베스트 이미지"></a>
+              <a href="#"><img src="images/bigStar.png" alt="베스트 이미지"></a>
+              <a href="#"><img src="images/bigStar.png" alt="베스트 이미지"></a>
+              <a href="#"><img src="images/bigStar.png" alt="베스트 이미지"></a>
+            </div>
+          </div>
+          <a href="#" class="prev"></a>
+          <a href="#" class="next"></a>
+        </div>
+      </div>
+
+      <div class="purchase_review">
+        <h2>상품 구매 리뷰</h2>
+        <div>
+          <ul class="review_tab">
+            <li class="active">전체리뷰(159)</li>
+            <li>포토리뷰(37)</li>
+          </ul>
+          
+          <select id="latest">
+            <option value="recommend">최신순</option>
+            <option value="date">인기순</option>
+          </select>
+        </div>
+
+        <div class="review_item">
+          <div class="star_rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>아주 좋아요!</span>
+          </div>
+
+          <div class="review_content">
+            <div class="review_message">
+              <p class="review_text">배송이 빨라서 좋습니다. 에이프런 자체도 좋은 편이고 옷감 자체가 다소 두터운 편이라 여름에 하기에는 더운 느낌이 있었습니다. <br> 더운 여름보다는 가을, 겨울에 사용하기는 괜찮을 것 같습니다.</p>
+              <div class="review_img">
+                <img src="images/main.jpg" alt="리뷰 이미지">
+              </div>
+            </div>
+
+            <div class="like">
+              <a href="#"></a>
+              <span class="likeNum">102</span>
+            </div>
+
+            <div class="user">
+              <ul>
+                <li><b>작성자</b><span>윤**</span></li>
+                <li><b>작성일</b><span>2021.10.08</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="review_item">
+          <div class="star_rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>보통이에요</span>
+          </div>
+
+          <div class="review_content">
+            <div class="review_message">
+              <p class="review_text">배송이 빨라서 좋습니다. 에이프런 자체도 좋은 편이고 옷감 자체가 다소 두터운 편이라 여름에 하기에는 더운 느낌이 있었습니다. <br> 더운 여름보다는 가을, 겨울에 사용하기는 괜찮을 것 같습니다.</p>
+              <div class="review_img">
+                <img src="images/main2.jpg" alt="리뷰 이미지">
+              </div>
+            </div>
+
+            <div class="like">
+              <a href="#"></a>
+              <span class="likeNum">57</span>
+            </div>
+
+            <div class="user">
+              <ul>
+                <li><b>작성자</b><span>최**</span></li>
+                <li><b>작성일</b><span>2021.10.02</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="review_item">
+          <div class="star_rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>좋아요!</span>
+          </div>
+
+          <div class="review_content">
+            <div class="review_message">
+              <p class="review_text">배송이 빨라서 좋습니다. 에이프런 자체도 좋은 편이고 옷감 자체가 다소 두터운 편이라 여름에 하기에는 더운 느낌이 있었습니다. <br> 더운 여름보다는 가을, 겨울에 사용하기는 괜찮을 것 같습니다.</p>
+              <div class="review_img">
+                <img src="images/main3.jpg" alt="리뷰 이미지">
+              </div>
+            </div>
+
+            <div class="like">
+              <a href="#"></a>
+              <span class="likeNum">71</span>
+            </div>
+
+            <div class="user">
+              <ul>
+                <li><b>작성자</b><span>김**</span></li>
+                <li><b>작성일</b><span>2021.09.27</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="indicator">
+          <a href="#" class="first"></a>
+          <a href="#" class="prev"></a>
+          <ul class="index">
+            <li><a href="#" class="active">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+          </ul>
+          <a href="#" class="next"></a>
+          <a href="#" class="last"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 리뷰 이미지 팝업창 -->
+  <div class="review_popupBG">
+    <div class="review_popup">
+      <div class="PopClose">&times;</div>
+
+      <div class="reviewPop_img">
+        <img src="" alt="">
+      </div>
+
+      <div class="reviewPop_text">
+        <div class="top">
+          <div class="popup_img">
+            <img src="" alt="">
+          </div>
+          <div class="pop_title">
+            <p></p>
+            <span></span>
+            <ul>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pop_text">
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- // 리뷰 이미지 팝업창 -->
+  
+  <div id="prdInfo">
+    <div class="inner">
+      <ul class="prdMenu">
+        <li><a href="#prdDetail">상품상세정보</a></li>
+        <li><a href="#prdReview">상품사용후기</a></li>
+        <li class="active"><a href="#prdInfo">상품구매안내</a></li>
+        <li><a href="#prdQnA">상품 Q&A</a></li>
+      </ul>
+
+      <div class="cont">
+        <h3>상품결제정보</h3><br>
+        <p>고액결제의 경우 안전을 위해 카드사에서 확인전화를 드릴 수도 있습니다. 확인과정에서 도난 카드의 사용이나 타인 명의의 주문등정상적인 주문이 아니라고 판단될 경우 임의로 주문을 보류 또는 취소할 수 있습니다.</p><br>
+        <p>무통장 입금은 상품 구매 대금은 PC뱅킹, 인터넷뱅킹, 텔레뱅킹 혹은 가까운 은행에서 직접 입금하시면 됩니다.</p>
+        <p>주문시 입력한 입금자명과 실제입금자의 성명이 반드시 일치하여야 하며, 7일 이내로 입금을 하셔야 하며 입금되지 않은 주문은 자동취소 됩니다.</p><br><br>
+      </div>
+
+      <div class="cont">
+        <h3>배송정보</h3><br>
+        <ul class="delivery">
+          <li>배송 방법 : 택배</li>
+          <li>배송 지역 : 전국지역</li>
+          <li>배송 비용 : 무료</li>
+          <li>배송 기간 : 3일 ~ 7일</li>
+          <li>배송 안내 : - 산간벽지나 도서지방은 별도의 추가금액을 지불하셔야 하는 경우가 있습니다.</li>
+          <li>고객님께서 주문하신 상품은 입금 확인후 배송해 드립니다. 다만, 상품종류에 따라서 상품의 배송이 다소 지연될 수 있습니다.</li><br><br>
+        </ul>
+
+        <h3>주문 취소 안내</h3><br>
+        <ul class="orderCancellation">
+          <li>- '입금확인중' 또는 '결제완료' 상태에서는 주문 취소 및 환불 처리가 가능합니다</li>
+          <li>- 전일 오후 ~ 당일 오전 결제 완료된 주문건은 월~금 13시 정각에 '상품준비중(배송준비중)' 상태로 변경됩니다</li>
+          <li>- '상품준비중(배송준비중)' 상태는 이미 배송을 위한 준비가 완료된 단계이기 때문에 주문 취소가 어렵습니다</li>
+          <li>- '상품준비중(배송준비중)' 단계에서 주문 취소 및 환불을 원할 경우, 제품을 받아보신 후 환불 요청을 통한 처리가 가능합니다</li>
+          <li>- 고객 변심으로 인한 주문취소/환불의 경우 고객 부담의 택배비가 발생할 수 있습니다.</li><br><br>
+        </ul>
+      </div>
+
+      <div class="cont">
+        <h3>교환 및 반품 정보</h3><br><br>
+        <h3>교환 및 반품 주소</h3><br>
+        <p>- [12817] 경기도 광주시 도척면 도척로 694-35</p><br><br>
+        <h3>교환 및 반품이 가능한 경우</h3><br>
+        <p>- 상품을 공급 받으신 날로부터 7일이내 단, 가전제품의</p>
+        <p>&nbsp;&nbsp;경우 포장을 개봉하였거나 포장이 훼손되어 상품가치가 상실된 경우에는 교환/반품이 불가능합니다.</p>
+        <p>- 공급받으신 상품 및 용역의 내용이 표시.광고 내용과</p>
+        <p>&nbsp;&nbsp;다르거나 다르게 이행된 경우에는 공급받은 날로부터 3월이내, 그사실을 알게 된 날로부터 30일이내</p><br><br>
+        <h3>교환 및 반품이 불가능한 경우</h3><br>
+        <p>- 고객님의 책임 있는 사유로 상품등이 멸실 또는 훼손된 경우. 단, 상품의 내용을 확인하기 위하여</p>
+        <p>&nbsp;&nbsp;포장 등을 훼손한 경우는 제외</p>
+        <p>- 포장을 개봉하였거나 포장이 훼손되어 상품가치가 상실된 경우</p>
+        <p>&nbsp;&nbsp;(예 : 가전제품, 식품, 음반 등, 단 액정화면이 부착된 노트북, LCD모니터, 디지털 카메라 등의 불량화소에</p>
+        <p>&nbsp;&nbsp;따른 반품/교환은 제조사 기준에 따릅니다.)</p>
+        <p>- 고객님의 사용 또는 일부 소비에 의하여 상품의 가치가 현저히 감소한 경우 단, 화장품등의 경우 시용제품을 </p>
+        <p>&nbsp;&nbsp;제공한 경우에 한 합니다.</p>
+        <p>- 시간의 경과에 의하여 재판매가 곤란할 정도로 상품등의 가치가 현저히 감소한 경우</p>
+        <p>- 복제가 가능한 상품등의 포장을 훼손한 경우</p>
+        <p>&nbsp;&nbsp;(자세한 내용은 고객만족센터 1:1 E-MAIL상담을 이용해 주시기 바랍니다.)</p><br><br>
+        <p>※ 고객님의 마음이 바뀌어 교환, 반품을 하실 경우 상품반송 비용은 고객님께서 부담하셔야 합니다.</p>
+        <p>&nbsp;&nbsp;(색상 교환, 사이즈 교환 등 포함)</p>
+      </div>
+
+      <div class="cont"></div>
+    </div>
+  </div>
+
+  <div id="prdQnA">
+    <div class="inner">
+      <ul class="prdMenu">
+        <li><a href="#prdDetail">상품상세정보</a></li>
+        <li><a href="#prdReview">상품사용후기</a></li>
+        <li><a href="#prdInfo">상품구매안내</a></li>
+        <li class="active"><a href="#prdQnA">상품 Q&A</a></li>
+      </ul>
+
+      <div class="QnA_board">
+        <h3>상품 Q&A</h3>
+        <p class="desc">상품에 대해 궁금한 점을 해결해 드립니다.</p>
+
+        <table class="QnA_tbl">
+          <caption>상품 Q&A</caption>
+          <thead>
+            <tr>
+              <th>번호</th>
+              <th>카테고리</th>
+              <th>제목</th>
+              <th>작성자</th>
+              <th>작성일</th>
+              <th>조회</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10</td>
+              <td>가구</td>
+              <td><a href="#">일시품절 제품 재입고 언제 되나요?</a></td>
+              <td>이**</td>
+              <td>2021-10-08</td>
+              <td>14</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>가구</td>
+              <td><a href="#">10% 할인 이벤트는 언제까지 인가요?</a></td>
+              <td>윤**</td>
+              <td>2021-10-05</td>
+              <td>36</td>
+            </tr>
+            <tr class="secret_tbl">
+              <td>8</td>
+              <td>가구</td>
+              <td><a href="#" class="secret">비밀글입니다.</a></td>
+              <td>김**</td>
+              <td>2021-10-04</td>
+              <td>24</td>
+            </tr>
+            <tr class="secret_tbl">
+              <td>7</td>
+              <td>가구</td>
+              <td><a href="#" class="secret">비밀글입니다.</a></td>
+              <td>최**</td>
+              <td>2021-10-02</td>
+              <td>29</td>
+            </tr>
+            <tr class="secret_tbl">
+              <td>6</td>
+              <td>가구</td>
+              <td><a href="#" class="secret">비밀글입니다.</a></td>
+              <td>고**</td>
+              <td>2021-10-01</td>
+              <td>8</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="indicator">
+          <a href="#" class="first"></a>
+          <a href="#" class="prev"></a>
+          <ul class="index">
+            <li><a href="#" class="active">1</a></li>
+            <li><a href="#">2</a></li>
+          </ul>
+          <a href="#" class="next"></a>
+          <a href="#" class="last"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cartPopupBG">
+    <div class="cartPopup">
+      <div>
+        <div class="PopClose">&times;</div>
+        <div class="cart_img">
+          <img src="images/bg_add_basket.gif" alt="장바구니 추가">
+        </div>
+        <p class="cart_text">장바구니에 상품이 정상적으로 담겼습니다.</p>
+      </div>
+
+      <div class="cartPopBtn">
+        <a href="#">쇼핑 계속하기</a>
+        <a href="../../cart/cart.html">장바구니 이동</a>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div class="inner">
+      <nav id="footerLnb">
+        <ul>
+          <li><a href="#">네이버 약관</a></li>
+          <li><a href="#">네이버페이 약관</a></li>
+          <li><a href="#">전자금융거래 이용약관</a></li>
+          <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+          <li><a href="#">책임의 한계와 법적고지</a></li>
+          <li><a href="#">청소년보호정책</a></li>
+          <li><a href="#">지식재산권신고센터</a></li>
+          <li><a href="#">안전거래 가이드</a></li>
+          <li><a href="#">쇼핑&페이 고객센터</a></li>
+        </ul>
+      </nav>
+      
+      <div class="footer_center">
+        <div class="naver">
+          <h5>네이버㈜</h5>
+          <div class="text">
+            사업자등록번호 220-81-62517<span class="bar"></span>통신판매업신고번호 2006-경기성남-0692호<br>
+            대표이사 한성숙<span class="bar"></span>경기도 성남시 분당구 불정로 6 네이버 그린팩토리 13561<br>
+            전화 1588-3819<span class="bar"></span>이메일 helpcustomer@naver.com<span class="bar"></span>사업자등록정보 확인<br>
+            호스팅 서비스 제공 : NAVER Cloud
+          </div>
+        </div>
+        <div class="service_center">
+          <h5>고객센터</h5>
+          <div class="text">
+            강원도 춘천시 퇴계로 89 강원전문건설회관<br>
+            전화 1588-3819<br>
+            결제도용신고 1588-3816<br>
+            <strong><a href="#">1:1문의 바로가기</a></strong>
+          </div>
+        </div>
+        <div class="e_finance">
+        <h5>전자금융거래 분쟁처리</h5>
+        <div class="text">
+          전화 1588-3819<br>
+          <strong><a href="#">1:1문의 바로가기</a></strong>
+        </div>
+      </div>
+    </div>
+    
+    <p class="responsibility">네이버㈜는 통신판매중개자이며, 통신판매의 당사자가 아닙니다. 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있습니다.</p>
+    <p class="copyright">Copyright ©NAVER Corp.All Rights Reserved.</p>
+  </div>
+</footer>
+
+  <div class="scrollTop"></div>
+</body>
+</html>
