@@ -14,6 +14,9 @@
     width: 1280px;
     margin: 0 auto;
 }
+section > h1 {
+    text-indent: -9999em;
+}
 
 /* 헤더 영역 */
 #header {
@@ -182,22 +185,306 @@
 }
 
 /* 메인 슬라이드 이미지 */
+#mainSlide .shuttleFrame {
+    position: relative;
+    width: 100%;
+    height: 900px;
+}
 #mainSlide .shuttleFrame a {
-    display: block;
+    /* display: block; */
     position: absolute;
 }
 #mainSlide .shuttleFrame img {
-    width: 1903px;
-    height: 859px;
+    width: 100%;
+    height: 970px;
 }
 #mainSlide a:not(:first-child) {
     display: none;
 }
 
 /* 스테디 셀러 영역 */
-#steady_seller .inner {
-    padding-top: 980px;
+#steady_seller {
+    margin: 200px 0;
 }
+#steady_seller .inner {
+    position: relative;
+}
+#steady_seller h1 {
+    text-align: center;
+    font-size: 34px;
+}
+.steady_slide {
+    margin: 50px 0;
+    overflow: hidden;
+}
+.steady_slide .shuttleFrame {
+    display: flex;
+    width: 1610px;
+}
+.steady_slide .shuttleFrame a {
+    display: block;
+    width: 300px;
+    margin-right: 26px;
+}
+.steady_slide .top {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.steady_slide .top img {
+    width: 300px;
+    height: 300px;
+    transition: 0.8s;
+}
+.steady_slide a:hover .top img {
+    transform: scale(1.07);
+}
+.steady_slide .bottom {
+    margin-top: 20px;
+}
+.steady_slide .bottom strong::after {
+    content: '원';
+}
+.steady_slide .bottom p:nth-child(2) {
+    font-size: 14px;
+    line-height: 26px;
+}
+.steady_slide .bottom p:nth-child(3) {
+    font-size: 11px;
+}
+#steady_seller .inner .prev,
+#steady_seller .inner .next {
+    position: absolute;
+    bottom: 13%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70px;
+    height: 70px;
+    border: 1px solid #cad1e1;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#steady_seller .inner .prev {
+    left: -10%;
+}
+#steady_seller .inner .next {
+    left: 110%;
+}
+#steady_seller .inner .prev:hover,
+#steady_seller .inner .next:hover {
+    background: #cad1e1;
+}
+#steady_seller .inner .prev:hover::after,
+#steady_seller .inner .next:hover::after {
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+#steady_seller .inner .prev::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -50%) rotate(45deg);
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid #cad1e1;
+    border-bottom: 2px solid #cad1e1;
+    transition: 0.5s;
+}
+#steady_seller .inner .next::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-70%, -50%) rotate(-135deg);
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid #cad1e1;
+    border-bottom: 2px solid #cad1e1;
+    transition: 0.5s;
+}
+
+/* section2 */
+#section2 {
+    padding: 100px 0 250px;
+    background: url(../images/bg_lc.jpg) no-repeat center;
+    background-attachment: fixed;
+}
+#section2 .inner {
+    text-align: center;
+}
+#section2 .whiteLogo img {
+zoom: 0.75;
+}
+#section2 .desc {
+    margin: 20px 0 30px;
+    color: #d5d5d5;
+    font-size: 14px;
+}
+#section2 .btnArea {
+    display: flex;
+    justify-content: center;
+}
+#section2 .btnArea a {
+    display: inline-block;
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    color: #d5d5d5;
+    border: 1px solid #d5d5d5;
+    font-size: 13px;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+#section2 .btnArea a:hover {
+    color: #fff;
+    background: #8ba3db;
+    border: 1px solid #8ba3db;
+}
+#section2 .btnArea a::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    left: -5px;
+    width: 19px;
+    height: 15px;
+    background: url(https://static-resource-smartstore.pstatic.net/brandstore/p/static/20211021183348/img/sprite/svg/spBs_icon_svg.svg) no-repeat center;
+    background-size: 275px 248px;
+    background-position: -171px -121px;
+}
+#section2 .btnArea .share {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #d5d5d5;
+    cursor: pointer;
+}
+#section2 .btnArea .share::before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 17px;
+    width: 18px;
+    height: 17px;
+    background: url(https://static-resource-smartstore.pstatic.net/brandstore/p/static/20211021183348/img/sprite/svg/spBs_icon_svg.svg) no-repeat;
+    background-size: 275px 248px;
+    background-position: -56px -227px;
+}
+
+/* section3 */
+#section3 {
+    position: relative;
+    top: -180px;
+}
+#section3 .inner {
+    display: flex;
+}
+#section3 .inner > div {
+    flex: 1;
+}
+#section3 .left_box > a {
+    display: block;
+    width: 625px;
+    height: 530px;
+    background: url(../images/01_sena_03.jpg) no-repeat center;
+    background-size: cover;
+    border-radius: 10px;
+}
+#section3 .left_box .bottom {
+    display: flex;
+    margin-top: 15px;
+}
+#section3 .left_box .bottom a {
+    display: block;
+    flex: 1;
+    height: 270px;
+    margin-right: 15px;
+    border-radius: 10px;
+}
+#section3 .left_box .bottom a:first-child {
+    background: url(../images/03_chamee.jpg) no-repeat center;
+    background-size: cover;
+}
+#section3 .left_box .bottom a:last-child {
+    background: url(../images/04_greennarae.jpg) no-repeat center;
+    background-size: cover;
+}
+#section3 .right_box a {
+    display: block;
+    width: 600px;
+    height: 400px;
+    border-radius: 10px;
+}
+#section3 .right_box a:first-child {
+    background: url(../images/02_piona_5c.jpg) no-repeat center;
+    background-size: cover;
+    margin-bottom: 15px;
+}
+#section3 .right_box a:last-child {
+    background: url(../images/naru_4c_03_03.jpg) no-repeat center;
+    background-size: cover;
+}
+
+/* section4 */
+#section4 .inner {
+    text-align: center;
+    padding: 0 0 150px;
+}
+#section4 .inner h2 {
+    font-size: 34px;
+    color: #2a2f3b;
+}
+#section4 .inner p {
+    font-size: 20px;
+    margin: 20px 0;
+    color: #555;
+}
+#section4 .instaImg {
+    display: flex;
+}
+#section4 .instaImg a {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 250px;
+    margin-right: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#section4 .instaImg a:last-child { margin-right: 0; }
+#section4 .instaImg a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 95%;
+    height: 95%;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    z-index: 1;
+}
+#section4 .instaImg span {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+#section4 .instaImg a:hover span {
+    transform: scale(1.03);
+}
+#section4 .instaImg a:nth-child(1) span { background: url(../images/insta.jpg) no-repeat center; background-size: cover; }
+#section4 .instaImg a:nth-child(2) span { background: url(../images/insta2.jpg) no-repeat center; background-size: cover; }
+#section4 .instaImg a:nth-child(3) span { background: url(../images/insta3.jpg) no-repeat center; background-size: cover; }
+#section4 .instaImg a:nth-child(4) span { background: url(../images/insta4.jpg) no-repeat center; background-size: cover; }
+#section4 .instaImg a:nth-child(5) span { background: url(../images/insta5.jpg) no-repeat center; background-size: cover; margin-right: 0;}
 
 
 /* 푸터 영역 */
@@ -264,4 +551,38 @@
 #footer .copyright {
     font-size: 11px;
     color: #2a2f3b;
+}
+
+/* 스크롤탑 */
+.scrollTop {
+    position: fixed;
+    right: 20px;
+    bottom: -100px;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 0 10px #8ba3d9;
+    background: #8ba3d9;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 100;
+}
+.scrollTop::after {
+    content: '';
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #fff;
+    border-top: 2px solid #fff;
+}
+.scrollTop.active {
+    bottom: 20px;
+}
+.scrollTop.on {
+    box-shadow: 0 0 10px #000;
+    background: rgba(0, 0, 0, 0.7);
 }

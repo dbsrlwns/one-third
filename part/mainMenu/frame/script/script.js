@@ -49,9 +49,9 @@ $(function (){
                 res += "<p class='title'>" + array[i][j] + "</p>";
             } else if(j == 2){
                 res += "<p class='price_area'>";
-                res += "<span class='sale'>" + array[i][j] + "</span>";
+                res += "<span class='sale numComma'>" + array[i][j] + "</span>";
             } else if(j == 3){
-                res += "<span class='consumer'>" + array[i][j] + "</span>";
+                res += "<span class='consumer numComma'>" + array[i][j] + "</span>";
             } else if(j == 4){
                 res += "<span class='percent'>" + array[i][j] + "</span></p>";
                 res += "</div>";
@@ -60,4 +60,13 @@ $(function (){
         res += "</a>";
     }
     $(".gallery_list").html(res);
+
+    // 갤러리 게시판 천단위 구분
+    let numDom = document.getElementsByClassName("numComma");
+    let tempNum;
+    
+    for(let i=0;i<numDom.length;i++){
+        tempNum = Number(numDom[i].innerText);
+        numDom[i].innerText = tempNum.toLocaleString();
+    }
 });

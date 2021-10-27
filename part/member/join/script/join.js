@@ -23,6 +23,69 @@ $(function () {
             $(".scrollTop").removeClass('active');
         }
     });
+
+    // 유효성 검사
+    let desc = $(this).siblings("b").text();
+    
+    $("#id").blur(function (){
+        let memChk = ["rjswmr","rjswmr1"];
+        let id = $(this).val();
+        let chkTF = true;
+        let regExp = /[^a-z|A-Z|0-9]/;
+        id = id.trim();
+
+        if(id == ""){
+            desc = "아이디를 입력해 주세요.";
+            $(this).siblings("b").removeClass('on');
+        } else if(id.length < 4 | id.length > 16){
+            desc = "아이디는 영문소문자 또는 숫자 4~16자로 입력해 주세요.";
+            $(this).siblings("b").removeClass('on');
+        } else if(regExp.test(id)){
+            desc = "특수문자나 한글이 포함된 아이디는 사용할 수 없습니다.";
+            $(this).siblings("b").removeClass('on');
+        } else {
+            desc = id + "는 사용 가능한 아이디입니다.";
+            $(this).siblings("b").addClass('on');
+        }
+        $.each(memChk, function (i, v) {
+
+            if (id == v) {
+                desc = "이미 사용중인 아이디입니다.";
+                $("#id").siblings("b").removeClass('on');
+                chkTF = false;
+            }
+
+        });
+        $(this).siblings("b").text(desc);
+
+    });
+
+    $("#password").blur(function (){
+        let pw = $(this).val();
+        var num = pw.search(/[0-9]/g);
+        var eng = pw.search(/[a-z]/ig);
+        var spe = pw.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
+        if(pw.length < 10 | pw.length > 16){
+            desc = "비밀번호는 10 ~ 16자 이내로 입력해 주세요.";
+        } else if(pw.search(/\s/) != -1 || num < 0 || eng < 0 || spe < 0){
+            desc = "영문, 숫자, 특수문자를 혼합하여 입력해 주세요.";
+        } else {
+            desc = "";
+        }
+        $(this).siblings("b").text(desc);
+    });
+
+    $("#password_chk").blur(function (){
+        let pw = $("#password").val();
+        let pwChk = $("#password_chk").val();
+        if(pw == pwChk){
+            desc = "";
+        } else {
+            desc = "비밀번호가 일치하지 않습니다.";
+        }
+        $(this).siblings("b").text(desc);
+    });
+
     
     // 전체선택
     $("#allChk").click(function (){

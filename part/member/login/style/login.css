@@ -229,11 +229,11 @@
     background: #f5f5f5;
     cursor: pointer;
     user-select: none;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #7794da;
 }
 .tabs_button li.active {
     color: #fff;
-    background: #333;
+    background: #7794da;
 }
 
 .tabs_contents input[type="text"],
@@ -260,11 +260,11 @@
     margin: 15px 0;
     font-size: 13px;
     color: #fff;
-    background: #222;
+    background: #7794da;
     transition: 0.3s;
 }
 .loginBtn:hover {
-    background: rgba(34, 34, 34, 0.8);
+    background: #8ba2d9b7;
 }
 .nonBtn {
     display: block;
@@ -273,11 +273,11 @@
     margin: 15px 0;
     font-size: 13px;
     color: #fff;
-    background: #222;
+    background: #7794da;
     transition: 0.3s;
 }
 .nonBtn:hover {
-    background: rgba(34, 34, 34, 0.8);
+    background: #8ba2d9b7;
 }
 
 .find_id {

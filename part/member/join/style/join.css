@@ -284,6 +284,13 @@ select {
 #memberType > div input {
     border: 1px solid #ddd;
 }
+#memberType > div b {
+    color: #f00;
+    font-size: 9px;
+}
+#memberType > div b.on {
+    color: #00f;
+}
 #memberType:nth-child(15) {
     border-bottom: 1px solid #ddd;
 }
@@ -413,16 +420,16 @@ input[type="radio"] {
 .join_btn {
     display: inline-block;
     padding: 10px 20px;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 5px;
     font-size: 14px;
     color: #fff !important;
     transition: 0.3s;
-    background: #222;
+    background: #7794da;
     cursor: pointer;
 }
 .join_btn:hover {
-    background: rgba(34, 34, 34, 0.8);
+    background: #8ba2d9b7;
 }
 
 
