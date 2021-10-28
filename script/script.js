@@ -48,7 +48,7 @@ $(function (){
         }
     });
 
-    /* -------  스테디 셀러 영역 슬라이드  -------- */
+    /* 스테디 셀러 영역 슬라이드 */
     let autoSlide = setInterval(steadyNext, 4000);
     
     // 자동 슬라이드
@@ -83,6 +83,43 @@ $(function (){
     // 마우스 나가면 자동 슬라이드  
     $("#steady_seller").mouseout(function () {
         autoSlide = setInterval(steadyNext, 4000);
+    });
+
+    /* 베스트 리뷰 영역 슬라이드 */
+    let autoSlide2 = setInterval(reviewNext, 4000);
+    
+    // 자동 슬라이드
+    function reviewNext(){
+        $(".review_slide .shuttleFrame").stop().animate({
+            "margin-left":"-430px"
+        },
+        300,
+        function (){
+            $(".review_slide .shuttleFrame a:first-child").insertAfter(".review_slide .shuttleFrame a:last-child");
+            $(".review_slide .shuttleFrame").css({"margin-left":"0"});
+        });
+    }
+
+    // 이전 버튼 클릭 슬라이드
+    $("#best_review .inner .prev").click(function (){
+        $(".review_slide .shuttleFrame a:last-child").insertBefore(".review_slide .shuttleFrame a:first-child");
+        $(".review_slide .shuttleFrame").css({"margin-left":"-430px"});
+
+        $(".review_slide .shuttleFrame").stop().animate({ "margin-left":"0" }, 300);
+    });
+
+    // 다음 버튼 클릭 슬라이드
+    $("#best_review .inner .next").click(function (){
+        reviewNext();
+    });
+
+    // 마우스 올리면 자동 멈춤
+    $("#best_review").mouseover(function () {
+        clearInterval(autoSlide2);            
+    });
+    // 마우스 나가면 자동 슬라이드  
+    $("#best_review").mouseout(function () {
+        autoSlide2 = setInterval(reviewNext, 4000);
     });
 
 

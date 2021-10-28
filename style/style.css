@@ -188,15 +188,14 @@ section > h1 {
 #mainSlide .shuttleFrame {
     position: relative;
     width: 100%;
-    height: 900px;
+    height: 100vh;
 }
 #mainSlide .shuttleFrame a {
-    /* display: block; */
     position: absolute;
 }
 #mainSlide .shuttleFrame img {
     width: 100%;
-    height: 970px;
+    height: 100vh;
 }
 #mainSlide a:not(:first-child) {
     display: none;
@@ -307,6 +306,153 @@ section > h1 {
     border-bottom: 2px solid #cad1e1;
     transition: 0.5s;
 }
+
+/* 베스트 리뷰 영역 */
+#best_review {
+    margin: 200px 0;
+}
+#best_review .inner {
+    position: relative;
+}
+#best_review h1 {
+    text-align: center;
+    font-size: 34px;
+}
+.review_slide {
+    margin: 50px 0;
+    overflow: hidden;
+}
+.review_slide .shuttleFrame {
+    display: flex;
+    width: 1750px;
+}
+.review_slide .shuttleFrame a {
+    display: block;
+    width: 300px;
+    margin-right: 7.65%;
+}
+.review_slide .top {
+    width: 410px;
+    height: 410px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.review_slide .top img {
+    width: 410px;
+    height: 410px;
+    transition: 0.8s;
+}
+.review_slide a:hover .top img {
+    transform: scale(1.07);
+}
+.review_slide .bottom {
+    margin-top: 20px;
+    width: 410px;
+}
+.review_slide .bottom .title {
+    font-size: 22px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.review_slide .bottom > span {
+    display: inline-block;
+    width: 88px;
+    height: 16px;
+    background: url(https://static-resource-smartstore.pstatic.net/brandstore/p/static/20211021183348/img/sprite/svg/spBs_icon_svg.svg) no-repeat;
+    background-size: 275px 248px;
+    background-position: -144px -97px;
+}
+.review_slide .bottom > span > span {
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    width: 92%;
+    height: 16px;
+    background: url(https://static-resource-smartstore.pstatic.net/brandstore/p/static/20211021183348/img/sprite/svg/spBs_icon_svg.svg) no-repeat;
+    background-size: 275px 248px;
+    background-position: -144px -73px;
+}
+.review_slide a:nth-child(2) .bottom > span > span {
+    width: 95%;
+}
+.review_slide .bottom b {
+    font-size: 24px;
+    margin-left: 8px;
+}
+.review_slide .bottom div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.review_slide .bottom div p {
+    display: -webkit-box;
+    max-height: 50px;
+    font-size: 13px;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.review_slide .bottom div img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+#best_review .inner .prev,
+#best_review .inner .next {
+    position: absolute;
+    bottom: 13%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70px;
+    height: 70px;
+    border: 1px solid #cad1e1;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#best_review .inner .prev {
+    left: -10%;
+}
+#best_review .inner .next {
+    left: 110%;
+}
+#best_review .inner .prev:hover,
+#best_review .inner .next:hover {
+    background: #cad1e1;
+}
+#best_review .inner .prev:hover::after,
+#best_review .inner .next:hover::after {
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+#best_review .inner .prev::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -50%) rotate(45deg);
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid #cad1e1;
+    border-bottom: 2px solid #cad1e1;
+    transition: 0.5s;
+}
+#best_review .inner .next::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-70%, -50%) rotate(-135deg);
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid #cad1e1;
+    border-bottom: 2px solid #cad1e1;
+    transition: 0.5s;
+}
+
 
 /* section2 */
 #section2 {
