@@ -12,7 +12,7 @@
     -webkit-box-sizing: border-box;
 }
 .inner {
-    width: 1280px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 
@@ -207,14 +207,12 @@
     height: 9px;
     background: url(../images/ico_path.gif) no-repeat center;
 }
-.cart_container {
-
-}
 .procedure_img {
     width: 1280px;
-    height: 65px;
+    height: 50px;
     background: url(../images/img_order_step1.gif) no-repeat center;
-    background-size: contain;
+    background-size: cover;
+    border: 1px solid #d5d5d5;
 }
 .cart_tab {
     margin: 50px 0 30px;
