@@ -44,52 +44,60 @@
           <li class="mainLi"><a href="../pillow/pillow.html">베개</a></li>
           <li class="mainLi"><a href="../frame/frame.html">프레임</a></li>
           <li class="mainLi"><a href="../fabric/fabric.html">패브릭</a></li>
-          <li class="mainLi"><a href="../notice/notice.html">공지사항</a></li>
+          <li class="mainLi"><a href="./notice.html">공지사항</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section id="mattress">
+  <section id="noticeArea">
     <div class="inner">
       <div class="path">
-        <h2>매트리스</h2>
         <ul>
           <li><a href="../../../index.html">홈</a></li>
-          <li><strong>매트리스</strong></li>
+          <li><strong>공지사항</strong></li>
         </ul>
       </div>
 
-      <div class="sequence">
-        <ul>
-          <li class="active"><a href="#">인기도순</a></li>
-          <li><a href="#">누적판매순</a></li>
-          <li><a href="#">낮은가격순</a></li>
-          <li><a href="#">최신등록순</a></li>
-          <li><a href="#">리뷰많은순</a></li>
-          <li><a href="#">평점높은순</a></li>
-        </ul>
+      <div class="divisionArea">
+        <h2>공지사항</h2>
+        <select id="division">
+          <option value="all" selected>전체</option>
+          <option value="normal">일반</option>
+          <option value="event">이벤트</option>
+          <option value="delay">배송지연</option>
+          <option value="goods">상품</option>
+        </select>
       </div>
 
-      <!-- 갤러리 게시판 틀 -->
-      <div class="gallery_list">
-        <!-- <a href="" class="gallery_area">
-          <div class="img_area">
-            <div class="img"></div>
-          </div>
-          <div class="text">
-            <p class="title"></p>
-            <p class="price_area">
-              <span class="sale"></span>
-              <span class="consumer"></span>
-              <span class="percent"></span></p>
-          </div>
-        </a> -->
-      </div>
-    </div>
+      <table class="notice">
+        <caption>공지사항</caption>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>제목</th>
+            <th>작성일</th>
+            <th>조회수</th>
+          </tr>
+        </thead>
+        <tbody class="noticeTbody">
+          <!-- <tr>
+            <td></td>
+            <td><a href="#"></a></td>
+            <td></td>
+            <td></td>
+          </tr> -->
+        </tbody>
+      </table>
 
-    <div class="page">
-      <div class="number">1</div>
+      <div class="page">
+        <div class="number">1</div>
+      </div>
+
+      <div class="textSearchArea">
+        <input type="text" id="textSearch" maxlength="20">
+        <button type="button">검색</button>
+      </div>
     </div>
   </section>
 

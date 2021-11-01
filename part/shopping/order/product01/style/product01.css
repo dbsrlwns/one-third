@@ -183,6 +183,14 @@ table caption {
     font-weight: bold;
     color: #6b90dc;
 }
+#mainMenu li:last-child a {
+    color: #55524c;
+    font-weight: normal;
+}
+#mainMenu li:last-child:hover a {
+    color: #6b90dc;
+    font-weight: normal;
+}
 
 /* product_detail */
 .product_detail {

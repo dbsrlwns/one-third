@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style/cart.css">
   <script src="script/jquery-3.6.0.min.js"></script>
   <script src="script/cart.js"></script>
-  <title>장바구니</title>
+  <title>삼분의일</title>
 </head>
 <body>
 
@@ -44,6 +44,7 @@
           <li class="mainLi"><a href="../../mainMenu/pillow/pillow.html">베개</a></li>
           <li class="mainLi"><a href="../../mainMenu/frame/frame.html">프레임</a></li>
           <li class="mainLi"><a href="../../mainMenu/fabric/fabric.html">패브릭</a></li>
+          <li class="mainLi"><a href="../../mainMenu/notice/notice.html">공지사항</a></li>
         </ul>
       </nav>
     </div>
@@ -53,6 +54,7 @@
     <div id="contents">
       <div class="inner">
         <div class="path">
+          <h2>장바구니</h2>
           <ul>
             <li><a href="../../../index.html">홈</a></li>
             <li><strong>장바구니</strong></li>
@@ -69,6 +71,56 @@
             </ul>
           </div>
 
+          <div class="empty">
+            <p>장바구니가 비어있습니다.</p>
+          </div>
+
+          <table id="cartArea">
+            <thead>
+              <tr>
+                <th colspan="10">일반상품(<span>1</span>)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>
+                  <input type="checkbox" id="chkAll">
+                </th>
+                <th>이미지</th>
+                <th>상품정보</th>
+                <th>판매가</th>
+                <th>수량</th>
+                <th>적립금</th>
+                <th>배송구분</th>
+                <th>배송비</th>
+                <th>합계</th>
+                <th>선택</th>
+              </tr>
+              
+              <tr>
+                <td>
+                  <input type="checkbox" class="goodsChk">
+                </td>
+                <td>
+                  <a href="#"><img src="images/img.jpg" alt="상품이미지"></a>
+                </td>
+                <td>삼분의일 C타입 매트리스</td>
+                <td class="numComma">376,500</td>
+                <td class="countBox">
+                  <input type="text" class="count" value="1">
+                  <div>
+                    <span class="increase"></span>
+                    <span class="decrease"></span>
+                  </div>
+                </td>
+                <td>-</td>
+                <td>개별배송</td>
+                <td>무료</td>
+                <td class="priceSum"></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

@@ -182,6 +182,14 @@
     color: #6b90dc;
     font-weight: bold;
 }
+#mainMenu li:last-child a {
+    color: #55524c;
+    font-weight: normal;
+}
+#mainMenu li:last-child:hover a {
+    color: #6b90dc;
+    font-weight: normal;
+}
 
 /* 토퍼 영역 */
 #topper {

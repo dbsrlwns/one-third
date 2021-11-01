@@ -183,6 +183,13 @@ section > h1 {
     font-weight: bold;
     color: #6b90dc;
 }
+#mainMenu li:last-child a {
+    color: #55524c;
+    font-weight: normal;
+}
+#mainMenu li:last-child:hover a {
+    color: #6b90dc;
+}
 
 /* 메인 슬라이드 이미지 */
 #mainSlide .shuttleFrame {
