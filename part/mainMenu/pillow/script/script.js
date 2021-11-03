@@ -8,6 +8,11 @@ $(function (){
         $("#mySearch").val("");
     });
 
+    // 마이페이지
+    $("#lnbMenu li:last-child").click(function(){
+        alert("로그인후에 이용해 주시길 바랍니다.");
+    });
+
     // 스크롤탑 버튼
     $(".scrollTop").click(function (){
         $("html, body").animate({scrollTop:0}, 500);

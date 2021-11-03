@@ -259,24 +259,24 @@ input {
 #join_form #memberType:first-child {
     border-bottom: 1px solid #ddd;
 }
-#memberType {
+.memberType {
     display: flex;
     align-items: center;
     border-top: 1px solid #ddd;
 }
-#memberType > h5 {
+.memberType > h5 {
     width: 160px;
     padding: 14px;
     font-weight: normal;
     font-size: 12px;
 }
-#memberType:nth-child(12) {
+.memberType:nth-child(12) {
     border-bottom: 1px solid #ddd;
 }
-#memberType:last-child {
+.memberType:last-child {
     border-bottom: 1px solid #ddd;
 }
-#memberType > .required::after {
+.memberType > .required::after {
     content: '';
     display: inline-block;
     position: relative;
@@ -286,23 +286,23 @@ input {
     height: 7px;
     background: url(../images/ico_required.gif) no-repeat center;
 }
-#memberType > div {
+.memberType > div {
     font-size: 12px;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
 }
-#memberType > div input {
+.memberType > div input {
     border: 1px solid #ddd;
 }
-#memberType > div b {
+.memberType > div b {
     color: #f00;
     font-size: 9px;
 }
-#memberType > div b.on {
+.memberType > div b.on {
     color: #00f;
 }
-#memberType:nth-child(15) {
+.memberType:nth-child(15) {
     border-bottom: 1px solid #ddd;
 }
 #password_answer {

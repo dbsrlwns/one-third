@@ -8,6 +8,11 @@ $(function (){
         $("#mySearch").val("");
     });
 
+    // 마이페이지
+    $("#lnbMenu li:last-child").click(function(){
+        alert("로그인후에 이용해 주시길 바랍니다.");
+    });
+
     // 스크롤탑 버튼
     $(".scrollTop").click(function (){
         $("html, body").animate({scrollTop:0}, 500);
@@ -55,12 +60,25 @@ $(function (){
     }
     $(".noticeTbody").html(res);
 
+    $(".noticeTbody tr td a").click(function (e){
+        e.preventDefault();
+    });
+
     // 공지사항 검색 기능
-    $(".textSearchArea button").click(function (){
-        let k = $("#textSearch").val();
-        // console.log(k);
-        $("tr").hide();
-        var temp = $("tr:contains('" + k + "')");
+    function fnSearch(){
+        let text = $("#textSearch").val();
+        
+        $("tbody tr").hide();
+        var temp = $("tr:contains('" + text + "')");
         $(temp).show();
+    }
+    $(".textSearchArea button").click(function (){
+        fnSearch();
+    });
+    
+    $("#textSearch").keypress(function (e){
+        if(e.keyCode == 13){
+            fnSearch();
+        }
     });
 });

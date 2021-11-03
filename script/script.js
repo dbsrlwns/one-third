@@ -8,18 +8,21 @@ $(function (){
         $("#mySearch").val("");
     });
 
-    
+    // 마이페이지
+    $("#lnbMenu li:last-child").click(function(){
+        alert("로그인후에 이용해 주시길 바랍니다.");
+    });
+
     // 전환형 슬라이드 쇼 
     function fnSlide() {
         $("#mainSlide a:first-child").fadeOut(
             2000,
             function() {
                 $("#mainSlide a:first-child").insertAfter("#mainSlide a:last-child");
-            }
-            );
+            });
         $("#mainSlide a:nth-child(2)").fadeIn(2000);
     }
-    setInterval(fnSlide, 4000);
+    setInterval(fnSlide, 3000);
 
     // 스크롤 바텀 표시
     $(window).scroll(function (){
@@ -47,6 +50,12 @@ $(function (){
             $(".scrollTop").removeClass('active');
         }
     });
+
+    // 메인슬라이드
+    $("#mainSlide .next").click(function (){
+        fnSlide();
+    });
+
 
     /* 스테디 셀러 영역 슬라이드 */
     let autoSlide = setInterval(steadyNext, 4000);

@@ -7,6 +7,11 @@ $(function (){
     $(".clear").click(function (){
         $("#mySearch").val("");
     });
+
+    // 마이페이지
+    $("#lnbMenu li:last-child").click(function(){
+        alert("로그인후에 이용해 주시길 바랍니다.");
+    });
     
     // 이미지 줌 효과
     $(".bigImg").elevateZoom({
@@ -74,7 +79,6 @@ $(function (){
         $(".total_price").text(sum);
         $(".total_count").text(count);
     }
-    
 
     // 리스트 추가 
     $("#product_option").change(function (){

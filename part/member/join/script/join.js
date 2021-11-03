@@ -8,6 +8,11 @@ $(function () {
         $("#mySearch").val("");
     });
 
+    // 마이페이지
+    $("#lnbMenu li:last-child").click(function(){
+        alert("로그인후에 이용해 주시길 바랍니다.");
+    });
+
     // 스크롤탑 버튼
     $(".scrollTop").click(function (){
         $("html, body").animate({scrollTop:0}, 500);
@@ -27,7 +32,7 @@ $(function () {
     // 유효성 검사
     let desc = $(this).siblings("b").text();
     
-    $("#id").blur(function (){
+    $("#id").keyup(function (){
         let memChk = ["rjswmr","rjswmr1"];
         let id = $(this).val();
         let chkTF = true;
@@ -60,7 +65,7 @@ $(function () {
 
     });
 
-    $("#password").blur(function (){
+    $("#password").keyup(function (){
         let pw = $(this).val();
         var num = pw.search(/[0-9]/g);
         var eng = pw.search(/[a-z]/ig);
@@ -75,10 +80,12 @@ $(function () {
         $(this).siblings("b").text(desc);
     });
 
-    $("#password_chk").blur(function (){
+    $("#password_chk").keyup(function (){
         let pw = $("#password").val();
         let pwChk = $("#password_chk").val();
         if(pw == pwChk){
+            desc = "";
+        } else if(pwChk == ""){
             desc = "";
         } else {
             desc = "비밀번호가 일치하지 않습니다.";
@@ -86,13 +93,30 @@ $(function () {
         $(this).siblings("b").text(desc);
     });
 
+    $(".join_btn").click(function (){
+        let a = $("#id").siblings("b").attr("class");
+        let b = $("#password").siblings("b").text();
+        let c = $("#password_chk").siblings("b").text();
+        
+        if(a != "on"){
+            alert("아이디를 확인해주세요.");
+            $("#id").focus();
+            return false;
+        } else if(b != ""){
+            alert("비밀번호를 확인해주세요.");
+            $("#password").focus();
+            return false;
+        } else if(c != ""){
+            alert("비밀번호가 일치하지 않습니다.");
+            $("#password_chk").focus();
+            return false;
+        }
+    }); 
+
     
     // 전체선택
     $("#allChk").click(function (){
         $(".ag").prop('checked', this.checked);
-    
-        // let chkValue = $(this).prop('checked');
-        // $(".ag").prop("checked", chkValue);
     });
     
     let wholeChk = false;
@@ -113,17 +137,6 @@ $(function () {
             wholeChk = false;
         }
         $("#allChk").prop("checked", wholeChk);
-
-        // 배열없이 선택방법
-        // let chkTF = false;
-        // let dom = document.getElementsByClassName("ag");
-        // let chk1 = dom[0].checked;
-        // let chk2 = dom[1].checked;
-
-        // if(chk1 && chk2){
-        //     chkTF = true;
-        // }
-        // $("#allChk").prop('checked', chkTF);
     });
 
 
@@ -137,15 +150,14 @@ $(function () {
     $("#zipcodeTabArea").children("button").click(function () {
 
         // 탭버튼 스타일 전환 시작
-        $("#zipcodeTabArea").children("button")
-                            .removeClass("tabSelected");
+        $("#zipcodeTabArea").children("button").removeClass("tabSelected");
         $(this).addClass("tabSelected");
         // 탭버튼 스타일 전환 끝
 
         // 지번/도로명 입력 힌트 안내문 시작
-        let roadNameHint = "";
         let dataZipLink = $(this).attr("data-ziplink");
         dataZipLink = dataZipLink.trim();
+        let roadNameHint = "";
         if (dataZipLink == "newZipcode") {
             roadNameHint = "도로명+건물번호(예:테헤란로5) | 읍/면/동/리+지번(예:서린동 154)"; 
             $("#oldAddr").css({"display": "none"});
@@ -162,20 +174,17 @@ $(function () {
 
 
         $("#zipcodePopup #oldAddr button").click(function(){
-            $("#zipcodePopup #oldAddr button")
-                    .removeClass("subTabSelected");
+            $("#zipcodePopup #oldAddr button").removeClass("subTabSelected");
             $(this).addClass("subTabSelected");
         });
         // 지번주소/도로명주소 서브버튼 멀티탭 끝
-
     });
         // 새 우편번호 <=> 구) 우편번호 멀티탭 전환 끝
-
 
     // 우편번호 레이어팝업 끝
 });
 
-// 우편번호 검색 레이어 닫기 시작
+// 우편번호 검색 레이어 닫기
 function fnClose() {
     document.getElementById("zipcodePopup").style.display = "none";
 }

@@ -18,7 +18,7 @@
           <li class="lnbLi"><a href="../login/login.html">로그인</a></li>
           <li class="lnbLi"><a href="./join.html">회원가입</a></li>
           <li class="lnbLi"><a href="../../shopping/cart/cart.html">장바구니</a></li>
-          <li class="lnbLi"><a href="#">마이페이지</a></li>
+          <li class="lnbLi"><a href="../login/login.html">마이페이지</a></li>
         </ul>
       </nav>
 
@@ -64,7 +64,7 @@
       </div>
 
       <form id="join_form" action="#" method="post">
-        <div id="memberType">
+        <div class="memberType">
           <h5 class="required">회원구분</h5>
           <div>
             <label>
@@ -79,15 +79,15 @@
           <p><span></span>필수입력사항</p>
         </div>
 
-        <div id="memberType">
+        <div class="memberType">
           <h5 class="required">아이디</h5>
           <div>
-            <input type="text" name="id" id="id" required autocomplete="off">
+            <input type="text" name="id" id="id" autocomplete="off">
             <b></b><span>(영문소문자/숫자, 4~16자)</span>
           </div>
         </div>
 
-        <div id="memberType">
+        <div class="memberType">
           <h5 class="required">비밀번호</h5>
           <div>
             <input type="password" name="password" id="password" required>
@@ -95,7 +95,7 @@
           </div>
         </div>
 
-        <div id="memberType">
+        <div class="memberType">
           <h5 class="required">비밀번호 확인</h5>
           <div>
             <input type="password" name="password_chk" id="password_chk" required>
@@ -103,10 +103,10 @@
           </div>
         </div>
 
-        <div id="memberType">
+        <div class="memberType">
           <h5 class="required">비밀번호 확인 질문</h5>
           <div>
-            <select name="password_questions" id="password_questions" required>
+            <select name="password_questions" id="password_questions">
               <option value="hint01">기억에 남는 추억의 장소는?</option>
               <option value="hint02">자신의 인생 좌우명은?</option>
               <option value="hint03">자신의 보물 1호는?</option>
@@ -115,21 +115,21 @@
           </div>
         </div>
 
-        <div id="memberType">
+        <div class="memberType">
           <h5 class="required">비밀번호 확인 답변</h5>
           <div>
-            <input type="text" name="password_answer" id="password_answer" required autocomplete="off">
+            <input type="text" name="password_answer" id="password_answer" autocomplete="off" required>
           </div>
         </div>
 
-        <div id="memberType">
+        <div class="memberType">
           <h5 class="required">이름</h5>
           <div>
-            <input type="text" name="name" id="name" required autocomplete="off">
+            <input type="text" name="name" id="name" autocomplete="off" required>
           </div>
         </div>
 
-        <div id="memberType">
+        <div class="memberType">
           <h5 class="required">주소</h5>
           <div class="addressArea">
             <div>
@@ -137,17 +137,17 @@
               <a href="#" id="zipcodeBtn" class="post_number">우편번호</a>
             </div>
             <div>
-              <input type="text" name="address" id="base_address" readonly required>
+              <input type="text" name="address" id="base_address" readonly>
               <span>기본주소</span>
             </div>
             <div>
-              <input type="text" name="address" id="detail_address" required autocomplete="off">
+              <input type="text" name="address" id="detail_address" autocomplete="off">
               <span>나머지주소</span>
             </div>
           </div>
         </div>
 
-        <div id="memberType">
+        <div class="memberType">
           <h5>일반전화</h5>
           <div>
             <select name="general_telephone" id="general_telephone">
@@ -160,14 +160,14 @@
             <span>-</span>
             <input type="tel" id="tel" name="tel">
             <span>-</span>
-            <input type="tel" id="tel2" neme="tel2">
+            <input type="tel" id="tel2" name="tel2">
           </div>
         </div>
 
-        <div id="memberType">
+        <div class="memberType">
           <h5 class="required">휴대전화</h5>
           <div>
-            <select name="cell_telephone" id="cell_telephone" required>
+            <select name="cell_telephone" id="cell_telephone">
               <option>010</option>
               <option>011</option>
               <option>016</option>
@@ -177,11 +177,11 @@
             <span>-</span>
             <input type="tel" id="phone" name="phone" required>
             <span>-</span>
-            <input type="tel" id="phone2" neme="phone2" required>
+            <input type="tel" id="phone2" name="phone2" required>
           </div>
         </div>
 
-        <div id="memberType">
+        <div class="memberType">
           <h5 class="required">이메일</h5>
           <div>
             <input type="email" name="email" id="email" required>
@@ -192,14 +192,14 @@
           <h4>필수정보</h4>
         </div>
 
-        <div id="memberType">
+        <div class="memberType">
           <h5>생년월일</h5>
           <div>
-            <input type="text" id="birth" name="birth" required autocomplete="off">
+            <input type="text" id="birth" name="birth" autocomplete="off">
             <span>년</span>
-            <input type="text" id="month" name="month" required autocomplete="off">
+            <input type="text" id="month" name="month" autocomplete="off">
             <span>월</span>
-            <input type="text" id="day" neme="day" required autocomplete="off">
+            <input type="text" id="day" name="day" autocomplete="off">
             <span>일</span>
             <label for="lift">
               <input type="radio" id="lift" name="calendar" checked> 양력
@@ -210,10 +210,10 @@
           </div>
         </div>
 
-        <div id="memberType">
+        <div class="memberType">
           <h5>지역</h5>
           <div>
-            <select name="region" id="region" required>
+            <select name="region" id="region">
               <option>선택</option>
               <option>경기</option>
               <option>서울</option>
@@ -461,8 +461,7 @@
       
         <!-- 구) 우편번호 서브 멀티탭 시작 -->
         <div id="oldAddr">
-            <button type="button" data-addrlink="jibeonAddr"
-            class="subTabSelected">
+            <button type="button" data-addrlink="jibeonAddr" class="subTabSelected">
                 지번주소
             </button>
             <button type="button" data-addrlink="doroAddr">
@@ -470,7 +469,6 @@
             </button>
         </div>
         <!-- div#oldAddr -->
-        <!-- 구) 우편번호 서브 멀티탭 끝 -->
 
         <div id="addressListArea">
             <div id="addressList">
@@ -488,8 +486,8 @@
     </footer>
     <!-- footer#zipcodeFooter -->
 </div>
-<!-- div#zipcodePopup -->
 <!-- 우편번호 레이어팝업 끝 -->
+
 <footer id="footer">
     <div class="inner">
       <nav id="footerLnb">

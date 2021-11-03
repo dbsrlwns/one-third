@@ -18,7 +18,7 @@
           <li class="lnbLi"><a href="../../member/login/login.html">로그인</a></li>
           <li class="lnbLi"><a href="../../member/join/join.html">회원가입</a></li>
           <li class="lnbLi"><a href="./cart.html">장바구니</a></li>
-          <li class="lnbLi"><a href="#">마이페이지</a></li>
+          <li class="lnbLi"><a href="../../member/login/login.html">마이페이지</a></li>
         </ul>
       </nav>
 
@@ -66,7 +66,7 @@
 
           <div class="cart_tab">
             <ul>
-              <li class="active">국내배송상품 (2)</li>
+              <li class="active">국내배송상품 (<span class="goodsCnt"></span>)</li>
               <li>해외배송상품 (0)</li>
             </ul>
           </div>
@@ -78,10 +78,9 @@
           <table id="cartArea">
             <thead>
               <tr>
-                <th colspan="10">일반상품(<span>1</span>)</th>
+                <th colspan="10">일반상품(<span class="goodsCnt"></span>)</th>
               </tr>
-            </thead>
-            <tbody>
+
               <tr>
                 <th>
                   <input type="checkbox" id="chkAll">
@@ -96,18 +95,20 @@
                 <th>합계</th>
                 <th>선택</th>
               </tr>
-              
+            </thead>
+            
+            <tbody>        
               <tr>
                 <td>
                   <input type="checkbox" class="goodsChk">
                 </td>
                 <td>
-                  <a href="#"><img src="images/img.jpg" alt="상품이미지"></a>
+                  <a href="../order/product01/product01.html"><img src="images/img.jpg" alt="상품이미지"></a>
                 </td>
-                <td>삼분의일 C타입 매트리스</td>
-                <td class="numComma">376,500</td>
+                <td><a href="../order/product01/product01.html">삼분의일 C타입 매트리스</a></td>
+                <td class="numComma listPrice1">376,500</td>
                 <td class="countBox">
-                  <input type="text" class="count" value="1">
+                  <input type="text" class="count cnt1" value="1">
                   <div>
                     <span class="increase"></span>
                     <span class="decrease"></span>
@@ -116,10 +117,49 @@
                 <td>-</td>
                 <td>개별배송</td>
                 <td>무료</td>
-                <td class="priceSum"></td>
-                <td></td>
+                <td class="priceSum sum1"></td>
+                <td class="btnArea">
+                  <button type="button" class="order">주문하기</button>
+                  <button type="button" class="order">관심상품</button>
+                  <button type="button" class="delete">삭제</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <input type="checkbox" class="goodsChk">
+                </td>
+                <td>
+                  <a href="../order/pillow01/pillow01.html"><img src="images/img2.jpg" alt="상품이미지"></a>
+                </td>
+                <td><a href="../order/pillow01/pillow01.html">삼분의일 메모리폼 숙면베개</a></td>
+                <td class="numComma listPrice2">75,200</td>
+                <td class="countBox">
+                  <input type="text" class="count cnt2" value="1">
+                  <div>
+                    <span class="increase"></span>
+                    <span class="decrease"></span>
+                  </div>
+                </td>
+                <td>-</td>
+                <td>개별배송</td>
+                <td>무료</td>
+                <td class="priceSum sum2"></td>
+                <td class="btnArea">
+                  <button type="button" class="order">주문하기</button>
+                  <button type="button" class="order">관심상품</button>
+                  <button type="button" class="delete">삭제</button>
+                </td>
               </tr>
             </tbody>
+
+            <tfoot>
+              <tr>
+                <td colspan="10">
+                  상품구매금액 <span class="totalPrice"></span> + 배송비 0 (무료) = <span class="totalPrice"></span>
+                </td>
+              </tr>
+            </tfoot>
           </table>
         </div>
       </div>
