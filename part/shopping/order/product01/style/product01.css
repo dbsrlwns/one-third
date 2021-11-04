@@ -784,7 +784,7 @@ table caption {
     padding: 17px 0;
     border-bottom: 1px solid #ddd;
 }
-.QnA_tbl td:nth-child(3) { width: 700px; }
+.QnA_tbl td:nth-child(3) { width: 700px;}
 .QnA_tbl td a:hover { text-decoration: underline; }
 .QnA_tbl .secret::before {
     content: '';
@@ -796,6 +796,25 @@ table caption {
     height: 14px;
     background: url(../images/ico_lock.gif) no-repeat center;
     background-size: cover;
+}
+
+.QnA_tbl tr.accordion { 
+    display: none;
+    background: #f7f8fa;
+    font-size: 12px;
+}
+.QnA_tbl .accordion td span {
+    display: inline-block;
+    width: 40px;
+    height: 18px;
+    vertical-align: top;
+    margin-right: 10px;
+    background: url(https://static-resource-smartstore.pstatic.net/brandstore/p/static/20211104163011/img/sprite/svg/spIcon_svg.svg) no-repeat;
+    background-size: 701px 658px;
+    background-position: -354px -343px;
+}
+.QnA_tbl tr.active {
+    display: table-row;
 }
 
 .indicator {
@@ -878,7 +897,8 @@ table caption {
     border: 1px solid #aaa;
 }
 .cartPopup .cartPopBtn a:last-child { 
-    background: #4c4c4c;
+    border: 1px solid #6b90dc;
+    background: #6b90dc;
     color: #fff;
 }
 

@@ -265,4 +265,15 @@ $(function (){
         }
         $(this).siblings("span").text(likeNum);
     });
+
+    // QnA 답변
+    $(".QnA_tbl tbody tr:nth-child(1) a").click(function (e){
+        e.preventDefault();
+        $(".ac1").toggleClass('active');
+    });
+
+    $(".QnA_tbl tbody tr:nth-child(3) a").click(function (e){
+        e.preventDefault();
+        $(".ac2").toggleClass('active');
+    });
 });

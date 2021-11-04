@@ -369,12 +369,12 @@ table caption {
 }
 .purchaseBtn a {
     display: block;    
-    background: #333;
+    background: #6b90dc;
     border: none !important;
     color: #fff;
 }
 .purchaseBtn a:hover {
-    background: #43495a !important;
+    background: #6b91dcd2 !important;
 }
 .cartBtn a,
 .interestedBtn a {
@@ -799,6 +799,25 @@ table caption {
     background-size: cover;
 }
 
+.QnA_tbl tr.accordion { 
+    display: none;
+    background: #f7f8fa;
+    font-size: 12px;
+}
+.QnA_tbl .accordion td span {
+    display: inline-block;
+    width: 40px;
+    height: 18px;
+    vertical-align: top;
+    margin-right: 10px;
+    background: url(https://static-resource-smartstore.pstatic.net/brandstore/p/static/20211104163011/img/sprite/svg/spIcon_svg.svg) no-repeat;
+    background-size: 701px 658px;
+    background-position: -354px -343px;
+}
+.QnA_tbl tr.active {
+    display: table-row;
+}
+
 .indicator {
     display: flex;
     justify-content: center;
@@ -879,7 +898,8 @@ table caption {
     border: 1px solid #aaa;
 }
 .cartPopup .cartPopBtn a:last-child { 
-    background: #4c4c4c;
+    border: 1px solid #6b90dc;
+    background: #6b90dc;
     color: #fff;
 }
 
