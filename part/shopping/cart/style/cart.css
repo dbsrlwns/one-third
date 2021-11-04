@@ -190,7 +190,7 @@
 
 /* #contents */
 #contents {
-    margin: 50px 0;
+    padding: 30px;
 }
 .path {
     display: flex;
@@ -228,7 +228,7 @@
 }
 .cart_tab ul {
     display: flex;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #6b90dc;
 }
 .cart_tab ul li {
     position: relative;
@@ -239,17 +239,17 @@
     font-weight: bold;
     background: #f9f9f9;
     border: 1px solid #ddd;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #6b90dc;
     color: #707070;
     cursor: pointer;
     user-select: none;
 }
 .cart_tab ul li:last-child {
-    border-left: 1px solid #000;
+    border-left: 1px solid #6b90dc;
     left: -1px;
 }
 .cart_tab ul li.active {
-    border: 1px solid #000;
+    border: 1px solid #6b90dc;
     border-bottom: none;
     background: #fff;
     color: #000;
@@ -399,12 +399,119 @@
     height: 1px;
     background: #aaa;
 }
+.allDeleteArea {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 0;
+}
+.allDeleteArea button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: #fff;
+}
+.allDeleteArea button:hover {
+    background: #f3f3f3;
+}
+#totalPayment {
+    border: 1px solid #333;
+    width: 100%;
+    border-collapse: collapse;
+}
+#totalPayment thead th {
+    font-size: 18px;
+    padding: 25px 0;    
+    border: 1px solid #ddd;
+    background: #fbfafa;
+}
+#totalPayment tbody td {
+    padding: 25px 0;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+#totalPayment tbody td:first-child {
+    font-size: 18px;
+    font-weight: bold;
+}
+#totalPayment tbody td:nth-child(2) {
+    font-size: 18px;
+    font-weight: bold;
+}
+#totalPayment tbody td:last-child {
+    width: 800px;
+    font-size: 30px;
+}
+#totalPayment tbody td:last-child::before {
+    content: '=';
+    margin-right: 10px;
+}
+.orderBtnArea {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+.orderBtnArea button {
+    padding: 8px 12px;
+    background-color: #fff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.orderBtnArea .allGoods {
+    margin-right: 10px;
+    background: #6b90dc;
+}
+.orderBtnArea .selectGoods {
+    background: #84868b;
+}
+
+/* 이용안내 영역 */
+#infoUse .inner {
+    border: 1px solid #ddd;
+    margin-top: 50px;
+}
+#infoUse .infoTitle {
+    padding: 10px;
+    background: #fbfafa;
+    border-bottom: 1px solid #ddd;
+}
+#infoUse .cartInfo {
+    padding: 0 10px 10px;
+}
+#infoUse .cartInfo h6 {
+    margin: 15px 0;
+}
+#infoUse .cartInfo ol li {
+    font-size: 11px;
+    line-height: 20px;
+    margin-left: 10px;
+    color: #707070;
+}
+#infoUse .cartInfo ol li::before {
+    content: '';
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    background: url(../images/ico_number.png) no-repeat center;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+#infoUse .cartInfo ol li.item1::before { background-position: -484px 0; }
+#infoUse .cartInfo ol li.item2::before { background-position: -434px -100px; }
+#infoUse .cartInfo ol li.item3::before { background-position: -384px -200px; }
+#infoUse .cartInfo ol li.item4::before { background-position: -334px -300px; }
+#infoUse .cartInfo ol li.item5::before { background-position: -284px -400px; }
+#infoUse .cartInfo ol li.item6::before { background-position: -234px -500px; }
 
 /* 푸터 영역 */
 #footer {
     background: #cad1e1;
     padding-bottom: 30px;
-    margin-top: 530px;
+    margin-top: 200px;
 }
 #footer a:hover {
     text-decoration: underline;

@@ -240,11 +240,11 @@ input {
     background: #f5f5f5;
     cursor: pointer;
     user-select: none;
-    border-bottom: 1px solid #7794da;
+    border-bottom: 1px solid #6b90dc;
 }
 .tabs_button li.active {
     color: #fff;
-    background: #7794da;
+    background: #6b90dc;
 }
 
 .tabs_contents input[type="text"],
@@ -271,7 +271,7 @@ input {
     margin: 15px 0;
     font-size: 13px;
     color: #fff;
-    background: #7794da;
+    background: #6b90dc;
     transition: 0.3s;
 }
 .loginBtn:hover {

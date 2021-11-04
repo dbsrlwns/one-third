@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/style.css">
   <script src="script/jquery-3.6.0.min.js"></script>
-  <script src="script/script.js"></script>
+  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script defer src="script/script.js"></script>
   <title>삼분의 일</title>
 </head>
 <body>
@@ -51,7 +52,26 @@
       </div>
     </header>
 
-    <div id="mainSlide">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="part/shopping/order/product01/product01.html"><img src="images/bg2.jpg" alt="슬라이드 이미지"></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="part/shopping/order/product03/product03.html"><img src="images/bg1.jpg" alt="슬라이드 이미지"></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="part/shopping/order/product02/product02.html"><img src="images/bg3.jpg" alt="슬라이드 이미지"></a>
+        </div>
+        <div class="swiper-slide">
+          <img src="images/bg4.jpg" alt="슬라이드 이미지">
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- <div id="mainSlide">
         <div class="shuttleFrame">
           <a href="part/shopping/order/product01/product01.html">
             <img src="images/bg2.jpg" alt="슬라이드 이미지">
@@ -68,7 +88,7 @@
         </div>
         <div class="prev"></div>
         <div class="next"></div>
-    </div>
+    </div> -->
 
     <section id="steady_seller">
       <div class="inner">

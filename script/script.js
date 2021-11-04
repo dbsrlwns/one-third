@@ -14,15 +14,15 @@ $(function (){
     });
 
     // 전환형 슬라이드 쇼 
-    function fnSlide() {
-        $("#mainSlide a:first-child").fadeOut(
-            2000,
-            function() {
-                $("#mainSlide a:first-child").insertAfter("#mainSlide a:last-child");
-            });
-        $("#mainSlide a:nth-child(2)").fadeIn(2000);
-    }
-    setInterval(fnSlide, 3000);
+    // function fnSlide() {
+    //     $("#mainSlide a:first-child").fadeOut(
+    //         2000,
+    //         function() {
+    //             $("#mainSlide a:first-child").insertAfter("#mainSlide a:last-child");
+    //         });
+    //     $("#mainSlide a:nth-child(2)").fadeIn(2000);
+    // }
+    // setInterval(fnSlide, 3000);
 
     // 스크롤 바텀 표시
     $(window).scroll(function (){
@@ -52,9 +52,9 @@ $(function (){
     });
 
     // 메인슬라이드
-    $("#mainSlide .next").click(function (){
-        fnSlide();
-    });
+    // $("#mainSlide .next").click(function (){
+    //     fnSlide();
+    // });
 
 
     /* 스테디 셀러 영역 슬라이드 */
@@ -136,4 +136,22 @@ $(function (){
     $("#section2 .btnArea a").click(function (){
         alert("로그인후에 이용해 주시길 바랍니다.");
     });
+});
+
+// 메인 전환형 슬라이드
+let swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    speed: 1500,
+    effect: "fade",
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    autoplay: { 
+        delay: 2500,
+    }
 });

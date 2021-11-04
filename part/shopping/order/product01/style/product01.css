@@ -369,12 +369,12 @@ table caption {
 }
 .purchaseBtn a {
     display: block;    
-    background: #222;
+    background: #6b90dc;
     border: none !important;
     color: #fff;
 }
 .purchaseBtn a:hover {
-    background: #43495a !important;
+    background: #6b91dcd2 !important;
 }
 .cartBtn a,
 .interestedBtn a {

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(../style/swiper-bundle.min.css);
 
 * {
     padding: 0;
@@ -192,7 +193,25 @@ section > h1 {
 }
 
 /* 메인 슬라이드 이미지 */
-#mainSlide .shuttleFrame {
+.swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+.swiper-slide img {
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+/* #mainSlide .shuttleFrame {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -261,7 +280,7 @@ section > h1 {
     border-left: 2px solid #555;
     border-bottom: 2px solid #555;
     transition: 0.5s;
-}
+} */
 
 /* 스테디 셀러 영역 */
 #steady_seller {
