@@ -256,7 +256,7 @@ input {
     height: 7px;
     background: url(../images/ico_required.gif) no-repeat center;
 }
-#join_form #memberType:first-child {
+#join_form .memberType:first-child {
     border-bottom: 1px solid #ddd;
 }
 .memberType {
