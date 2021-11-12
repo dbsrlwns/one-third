@@ -529,7 +529,6 @@ table caption {
     width: 106px;
     height: 102px;
     margin-right: 5px;
-    border: 1px solid #000;
 }
 .review_slide .shuttleFrame img {
     width: 100%;
@@ -976,8 +975,8 @@ table caption {
     bottom: -100px;
     width: 45px;
     height: 45px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    background: rgba(34, 34, 34, 0.8);
+    box-shadow: 0 0 10px #6b90dc;
+    background: #6b90dc;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.3s;
@@ -997,4 +996,8 @@ table caption {
 }
 .scrollTop.active {
     bottom: 20px;
+}
+.scrollTop.on {
+    box-shadow: 0 0 10px #000;
+    background: rgba(0, 0, 0, 0.7);
 }
